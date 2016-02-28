@@ -1,0 +1,1899 @@
+<div class='sheet-maindiv'>
+    <input type='checkbox' name='attr_lock_playbook' class='sheet-lock'>
+    <label class="sheet-lock"><small>Lock Playbook</small></label><br/>
+    <label class="sheet-name">Playbook:</label>
+    <input type='checkbox' name='attr_lock_playbook' class='sheet-lock' style="display: none;">
+    <div class="sheet-playbookSelected" style=" width: 100%; padding-left: 20px;">
+    	<input type='checkbox' name='attr_lock_playbook' class='sheet-lock' style="display: none;">
+    	<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Chosen' style="display: none;"/><label>Chosen </label>    		
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Crooked' style="display: none;"/><label>Crooked </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Divine' style="display: none;"/><label>Divine </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Expert' style="display: none;"/><label>Expert </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Flake' style="display: none;"/><label>Flake </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Initiate' style="display: none;"/><label>Initiate </label>    
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Monstrous' style="display: none;"/><label>Monstrous </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Mundane' style="display: none;"/><label>Mundane </label>    
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Professional' style="display: none;"/><label>Professional </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Spell-Slinger' style="display: none;"/><label>Spell-Slinger </label>
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Spooky' style="display: none;"/><label>Spooky </label>	
+		<input type="checkbox" name="attr_playbook" class="sheet-playbook" value='Wronged' style="display: none;"/><label>Wronged </label>			
+    </div>
+    <div class="sheet-2colrow" style="padding-left: 20px;">
+    	<input type='checkbox' name='attr_lock_playbook' class='sheet-lock' style="display: none;">
+    	<div class="sheet-col sheet-playbookcol" style="width: 120px;">
+    		<input type='radio' name='attr_lock_playbook' class='sheet-lock' style="display: none;">
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Chosen' /><label style="width: 70%;">Chosen</label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Crooked'/><label style="width: 70%;">Crooked</label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Divine'/><label style="width: 70%;">Divine</label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Expert'/><label style="width: 70%;">Expert</label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Flake'/><label style="width: 70%;">Flake</label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Initiate'/><label style="width: 70%;">Initiate</label>
+		</div>
+		<div class="sheet-col sheet-playbookcol" style="width: 120px;">    
+			<input type='radio' name='attr_lock_playbook' class='sheet-lock' style="display: none;">
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Monstrous'/><label style="width: 70%;">Monstrous </label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Mundane'/><label style="width: 70%;">Mundane </label>    
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Professional'/><label style="width: 70%;">Professional </label>	
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Spell-Slinger'/><label style="width: 70%;">Spell-Slinger </label>
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Spooky'/><label style="width: 70%;">Spooky </label>	
+			<input type="radio" name="attr_playbook" class="sheet-playbook" value='Wronged'/><label style="width: 70%;">Wronged </label>
+		</div>
+	</div>           
+    <div class="sheet-3colrow">
+    <!--<div class="sheet-row">
+    <div class="sheet-col" style="width: 33%;">-->
+        <div class="sheet-col odd">
+        	<label class="sheet-playbook-moves sheet-section-title">Stats:</label>
+			<div class="sheet-attr-box">
+				<label class="sheet-charm sheet-name">Charm:</label>
+				<input class="sheet-stat" type="Number" min="-1" max="3" name="attr_charm" value="0"/>
+				<div class="sheet-roll-box sheet-cf">
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Manipulate someone </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Manipulate someone}} {{roll_mod=@{charm}}} {{result=[[2d6 + @{charm}]]}}' name='roll_dsuf'></button>  
+					</div>
+				</div>  
+        	</div>
+			<div class="sheet-attr-box">
+				<label class="sheet-cool sheet-name">Cool:</label>
+				<input class="sheet-stat" type="Number" min="-1" max="3" name="attr_cool" value="0"/>
+				<div class="sheet-roll-box sheet-cf">
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Act Under Pressure </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Act Under Pressure}} {{roll_mod=@{cool}}} {{result=[[2d6 + @{cool}]]}}' name='roll_dsuf'></button><br>
+					</div>
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Help Out </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Help Out}} {{roll_mod=@{cool}}} {{result=[[2d6 + @{cool}]]}}' name='roll_dsuf'></button><br>
+					</div>
+				</div>  
+        	</div>
+			<div class="sheet-attr-box">
+				<label class="sheet-sharp sheet-name">Sharp:</label>
+				<input class="sheet-stat" type="Number" min="-1" max="3" name="attr_sharp" value="0"/>
+				<div class="sheet-roll-box sheet-cf">
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Investigate a Mystery </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Investigate a Mystery}} {{roll_mod=@{sharp}}} {{result=[[2d6 + @{sharp}]]}}' name='roll_dsuf'></button><br>
+					</div>
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Read a Bad Situation </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Read a Bad Situation}} {{roll_mod=@{sharp}}} {{result=[[2d6 + @{sharp}]]}}' name='roll_dsuf'></button><br> 
+					</div>
+				</div>  
+        	</div>
+			
+			<div class="sheet-attr-box">
+				<label class="sheet-tough sheet-name">Tough:</label>
+				<input class="sheet-stat" type="Number" min="-1" max="3" name="attr_tough" value="0"/>
+				<div class="sheet-roll-box sheet-cf">
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Kick Some Ass </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Kick Some Ass}} {{roll_mod=@{tough}}} {{result=[[2d6 + @{tough}]]}}' name='roll_dsuf'></button><br> 
+					</div>
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Protect Someone </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=Protect Someone}} {{roll_mod=@{tough}}} {{result=[[2d6 + @{tough}]]}}' name='roll_dsuf'></button><br>
+					</div>
+				</div>  
+        	</div>
+	
+			<div class="sheet-attr-box">
+				<label class="sheet-weird sheet-name">Weird:</label>
+				<input class="sheet-stat" type="Number" min="-1" max="3" name="attr_weird" value="0"/>
+				<div class="sheet-roll-box sheet-cf">
+					<div class="sheet-action-row">
+						<label class="sheet-buttonLbl">Use Magic </label>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=UseMagic}} {{roll_mod=@{weird}}} {{result=[[2d6 + @{weird}]]}}' name='roll_dsuf'></button>  
+					</div>
+				</div>  
+        	</div>
+			        	
+        	<div class="sheet-box">
+				<label class="sheet-improvements sheet-section-title">Improvements:</label>
+
+				<div class="sheet-tracker">
+					<label class="sheet-improvement">Experience:</label>
+					<input type="checkbox" name="attr_sheet-improvement-1" />
+					<input type="checkbox" name="attr_sheet-improvement-2" />
+					<input type="checkbox" name="attr_sheet-improvement-3" />
+					<input type="checkbox" name="attr_sheet-improvement-4" />
+					<input type="checkbox" name="attr_sheet-improvement-5" />
+				</div>
+				<input type='checkbox' name='attr_sheet-show_improvements' class='sheet-showhide'/>
+				<label class="sheet-showhide"><small>Show/Hide Improvements</small></label><br/>
+				<small>Add all these improvements manually into your stats, they will not be auto-calculated</small>
+				
+				<div class="sheet-subbox">
+					<!-- Playbook Selected -->
+					<input type="checkbox" name="attr_playbook" class="sheet-isChosen" value='Chosen' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isCrooked" value='Crooked' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isDivine" value='Divine' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isExpert" value='Expert' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isFlake" value='Flake' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isInitiate" value='Initiate' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isMonstrous" value='Monstrous' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isMundane" value='Mundane' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isProfessional" value='Professional' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isSpell-Slinger" value='Spell-Slinger' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isSpooky" value='Spooky' style="display: none;" />
+					<input type="checkbox" name="attr_playbook" class="sheet-isWronged" value='Wronged' style="display: none;" />
+					<!-- End Playbook Selected -->
+				
+					<div class="sheet-Chosen">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-6" /> Get +1 Charm (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-7" /> Get +1 Cool (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-8" /> Get +1 Sharp (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-9" /> Get +1 Tough (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-10" /> Get +1 Weird (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-11" /> Take another Chosen move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-12" /> Take another Chosen move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-13" /> Gain an ally</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-16" /> Get +1 to any rating (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-17" /> Change this hunter to a new type.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_chosen-improvement-22" /> Delete one of your Doom tags, and (optionally) one of your Heroic tags. You have changed that aspect of your destiny.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Crooked">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-6" /> Get +1 Sharp (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-7" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-8" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-9" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-10" /> Take another Crooked move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-11" /> Take another Crooked move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-12" /> Gain an ally: one of your old crew.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-13" /> Recover a stash of money from the old days, enough to live without care... for a year or two.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-16" /> Get +1 to any rating (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-17" /> Change this hunter to a new type.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Crooked-improvement-22" /> Erase one used luck mark from your playbook.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Divine">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-6" /> Get +1 Tough (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-8" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-9" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-10" /> Get +1 Weird (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-11" /> Take another Divine move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-12" /> Take another Divine move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-13" /> Gain a lesser divine being as an ally, sent from above to help with your mission</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-22" /> Erase one used luck mark from your playbook.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Divine-improvement-23" /> Change your mission. Select a different mission from the normal options, or (with the Keeper's agreement) a new mission of your creation.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Expert">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-6" /> Get +1 Sharp (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-7" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-8" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-9" /> Get +1 Weird (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-10" /> Take another Expert move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-11" /> Take another Expert move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-12" /> Add an option to your haven</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-13" /> Add an option to your haven</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Expert-improvement-21" /> Retire this Hunter to safety.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Flake">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-6" /> Get +1 Sharp (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-7" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-8" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-9" /> Get +1 Weird (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-10" /> Take another Flake move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-11" /> Take another Flake move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-12" /> Gain a haven, like the Expert has, with two options</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-13" /> Add another option to your haven</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Flake-improvement-21" /> Retire this Hunter to safety.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Initiate">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-6" /> Get +1 Weird (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-9" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-10" /> Take another Initiate move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-11" /> Take another Initiate move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-12" /> Get command of your chapter of the Sect</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-13" /> Get a Sect team under your command</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Initiate-improvement-22" /> Become the leader, or effective leader, of the whole Sect.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Monstrous">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-6" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-9" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-10" /> Take another Monstrous move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-11" /> Take another Monstrous move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-12" /> Gain a haven, like the Expert has, with two optionss</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-13" /> Take a natural attacks pick</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-22" /> Free yourself from the curse of your kind. Your curse no longer applies, but you lose 1 Weird.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Monstrous-improvement-23" /> You turn evil (again). Retire this character, they become one of the Keeper's threats.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Mundane">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-6" /> Get +1 Charm (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-9" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-10" /> Take another Mundane move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-11" /> Take another Mundane move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-12" /> Get back one used Luck point</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-13" /> Get back one used Luck point</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-22" /> Get back one used Luck point</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Mundane-improvement-23" /> Get back one used Luck point</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Professional" style="padding-left: 20px;">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-6" /> Get +1 Cool (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-7" /> Get +1 Charp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-9" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-10" /> Take another Professional move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-11" /> Take another Professional move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-12" /> Add a new resource tag for your Agency or change a red tape tag</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-13" /> Get command of an Agency team of monster hunters</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Professional-improvement-22" /> Get some or all of the other players' hunters hired by your agency. They get the deal with the agency move, as well as salary and benefits.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Spell-Slinger">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-6" /> Get +1 Weird (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-9" /> Get +1 Tough (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-10" /> Take another Spell-Slinger move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-11" /> Take another Spell-Slinger move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-12" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-13" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-14" /> Take another Combat Magic pick.</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-15" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-16" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-17" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-18" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-19" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-20" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-21" /> Erase one used Luck mark from your playbook.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-22" /> Take another Combat Magic pick.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spell-Slinger-improvement-23" /> Cross off another option from your Tools and Techniques.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Spooky">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-6" /> Get +1 Weird (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-7" /> Get +1 Charm (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-8" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-9" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-10" /> Take another Spooky move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-11" /> Take another Spooky move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-12" /> Change some, or all, your dark side tags</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-13" /> Get a mystical library, like the Expert's haven option</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Spooky-improvement-22" /> You discover how to use your powers at a lower price. Delete one dark side tag permanently.</label></li>
+						</ul>
+					</div>
+					<div class="sheet-Wronged">
+						<ul>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-6" /> Get +1 Tough (max +3)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-7" /> Get +1 Cool (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-8" /> Get +1 Sharp (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-9" /> Get +1 Weird (max +2)</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-10" /> Take another Wronged move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-11" /> Take another Wronged move</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-12" /> Gain a haven, like the Expert has, with two options</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-13" /> Add another option to your Haven</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-14" /> Take a move from another playbook</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-15" /> Take a move from another playbook</label></li>
+							<hr>
+							<li><label class="sheet-improvement">Advanced Improvements - Selectable once you have leveled up 5 times</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-16" /> Get +1 to any rating, max +3</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-17" /> Change this hunter to a new type</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-18" /> Create a second hunter to play as well as this one.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-19" /> Mark two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-20" /> Mark another two of the basic moves as advanced.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-21" /> Retire this Hunter to safety.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-22" /> You track down the specific monster(s) responsible for your loss. The Keeper must make the next mystery about them.</label></li>
+							<li><label class="sheet-improvement"><input type="checkbox" name="attr_Wronged-improvement-23" /> Change the target of your vengeful rage. Pick a new monster breed: I know my prey now applies to them instead.</label></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+        <div class="sheet-col even">
+        	<label class="sheet-playbook-moves sheet-section-title">Playbook Moves:</label>
+			<!-- Playbook Selected -->
+			<input type="checkbox" name="attr_playbook" class="sheet-isChosen" value='Chosen' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isCrooked" value='Crooked' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isDivine" value='Divine' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isExpert" value='Expert' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isFlake" value='Flake' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isInitiate" value='Initiate' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isMonstrous" value='Monstrous' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isMundane" value='Mundane' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isProfessional" value='Professional' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isSpell-Slinger" value='Spell-Slinger' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isSpooky" value='Spooky' style="display: none;" />
+			<input type="checkbox" name="attr_playbook" class="sheet-isWronged" value='Wronged' style="display: none;" />
+			<!-- End Playbook Selected -->
+				<div class="sheet-Chosen">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Chosenmovename1" value="Destiny's Plaything" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Chosenmovename1}}} {{roll_mod=[[@{weird}]]}} {{result=[[2d6 + @{weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">At the beginning of each mystery, roll +Weird to see what is revealed about your immediate future. On a 10+, the Keeper will reveal a useful detail about the coming mystery. On a 7-9 you get a vague hint about it. On a miss, some- thing bad is going to happen to you.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled2" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Chosenmovename2" value="I'm Here For A Reason" readonly />
+						<label class="sheet-playbook_move_text">There's something you are destined to do. Work out the details with the Keeper, based on your fate. You cannot die until it comes to pass. If you die in play, then you must spend a Luck point. You will then, somehow, recover or be returned to life. Once your task is done (or you use up all your Luck), all bets are off.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Chosenmovename3" value="The Big Entrance" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Chosenmovename3}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you make a showy entrance into a dangerous situation, roll +Cool. On 10+ everyone stops to watch and listen until you finish your opening speech. On a 7-9, you pick one person or monster to stop, watch and listen until you finish talking. On a miss, you're marked as the biggest threat by all enemies who are present.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Chosenmovename4" value="Devastating" readonly />
+						<label class="sheet-playbook_move_text">When you inflict harm, you may inflict +1 harm.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename5" value="Dutiful" readonly />
+						<label class="sheet-playbook_move_text">When your fate rears its ugly head, and you act in accordance with any of your fate tags (either heroic or doom) then mark experience. If it's a heroic tag, take +1 forward.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename6" value="Invincible" readonly />
+						<label class="sheet-playbook_move_text">You always count as having 2-armour. This doesn't stack with other protection.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ChosenmoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename7" value="Resilience" readonly />
+						<label class="sheet-playbook_move_text">You heal faster than normal people. Any time your harm gets healed, heal an extra point. Additionally, your wounds count as 1-harm less for the purpose of the Keeper's harm moves.</label>
+					</div>
+				</div>
+				<div class="sheet-Crooked">
+					<input type="checkbox" class="sheet-featurelock" name="attr_Backgroundlocked"><label>Lock Background</label>
+					<div>
+						<input type="checkbox" class="sheet-feature" style="display: none;"> <label class="sheet-playbook_move_text">You worked a less-than-legal job before you became a monster hunter. What did you do</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Hoodlum"><label>Hoodlum<br>You can use Tough instead of Charm to manipulate someone with threats of violence.
+							<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{CrookedBackground}}} {{roll_mod=[[@{Tough}]]}} {{result=[[2d6 + @{Tough}]]}}' name='roll_move'></button> 
+						</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Burglar"><label>Burglar<br>When you break into a secure location, roll +Sharp.<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{CrookedBackground}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button>
+						On a 10+ pick three, on a 7-9 pick two:
+						<ul>
+							<li class="sheet-squares">You get in undetected</li> 
+							<li class="sheet-squares">You get out undetected</li>
+							<li class="sheet-squares">You don't leave a mess</li>
+							<li class="sheet-squares">You find what you were after.</li>
+						</ul>
+						</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Grifter"><label>Grifter<br>When you are about to manipulate someone, you can ask the Keeper "What will convince this person to do what I want?" The Keeper must answer honestly, but not necessarily completely.</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Fixer"><label>Fixer<br>If you need to buy something, sell something, or hire someone, roll +Charm.<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{CrookedBackground}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button> <br>
+						On a 10+ you know just the person who will be interested.<br>On a 7-9 you know the only person who can do it, but there's a complication, pick one:
+						<ul>
+							<li class="sheet-squares">You owe them</li> 
+							<li class="sheet-squares">They screwed you over</li>
+							<li class="sheet-squares">You screwed them over</li>
+						</ul>
+						On a miss, the only person who can help is someone who absolutely hates you.</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Assassin"><label>Assassin<br>When you take your first shot at an unsuspecting target, do +2 Harm.</label><br>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Charlatan"><label>Charlatan<br>When you want people to think you are using magic, roll +Cool.<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{CrookedBackground}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button><br>
+						On a 10+, your audience is amazed and fooled by your illusion. <br>On a 7-9 you tripped up a couple of times, maybe someone will notice.<br>
+						You may also manipulate people with fortune telling. When you do that, ask "What are they hoping for right now?" as a free question (even on a miss).</label>
+						<input type="radio" class="sheet-feature" name="attr_CrookedBackground" value="Pickpocket"><label>Pickpocket<br>When you steal something small, roll +Charm.<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{CrookedBackground}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button> <br>
+						On a 10+, you get it and they didn't notice you taking it. <br>On a 7-9 pick one:
+						<ul>
+							<li class="sheet-squares">You don't grab it</li> 
+							<li class="sheet-squares">You grab the wrong thing</li>
+							<li class="sheet-squares">They remember you later</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sheet-Crooked">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Crookedmovename1" value="Artifact" readonly />
+						<div>
+							<label class="sheet-playbook_move_text">You "found" a magical artifact with handy powers, and kept it. Pick one:</label>
+							<ul>
+							<li><label class="sheet-playbook_move_text"><input type="radio" name="attr_CrookedArtifact" Value="Amulet">Protective amulet (1-armour magic recharge)</label></li>
+							<li><label class="sheet-playbook_move_text"><input type="radio" name="attr_CrookedArtifact" Value="Charm">Lucky charm (may be used as a Luck point, once only)</label></li>
+							<li><label class="sheet-playbook_move_text"><input type="radio" name="attr_CrookedArtifact" Value="Grimoire">Grimoire (studying the book gives +1 forward to use magic)</label></li>
+							<li><label class="sheet-playbook_move_text"><input type="radio" name="attr_CrookedArtifact" Value="Key">Skeleton key (opens any magically sealed lock)</label></li>
+							<li><label class="sheet-playbook_move_text"><input type="radio" name="attr_CrookedArtifact" Value="Imp">Imp stone (A weak demon is bound to serve the holder. The imp must be summoned with the use magic move)</label></li>
+							</ul>
+						</div>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Crookedmovename2" value="Crew" readonly />
+						<label class="sheet-playbook_move_text">You have a regular crew, a team of three or four people who will help you out with pretty much anything. They count as a team.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Crookedmovename3" value="Deal With the Devil" readonly />
+						<label class="sheet-playbook_move_text">You sold your soul to the Devil. Pick one or two things you got out of the deal: wealth, fame, youth, sensual gratification, skill (add +1 to two ratings). Payment is due either when you die, in six months (if you picked two things) or otherwise in a year.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Crookedmovename4" value="Friends on the Force" readonly />
+						<label class="sheet-playbook_move_text">You know a few cops who can be persuaded to look the other way, or do you a favour, for certain considerations. You can act under pressure to get in touch with them when you need to divert any law enforcement attention. There will be a cost, although maybe not right now.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename5" value="Made" readonly />
+						<label class="sheet-playbook_move_text">You're "made" in a gang. Name the gang and describe how their operations tie into your background. You can call on gang members to help you out, but they'll expect to be paid. Your bosses will have requests for you now and again, but you'll be paid. Minor trouble will be overlooked, but you better not screw over any other made gangsters.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename6" value="Drive" readonly />
+						<label class="sheet-playbook_move_text">You have +1 ongoing while driving, plus you can hotwire anything (the older it is, the fewer tools you need to do it). You also own two handy, widely-available vehicles (perhaps a sportscar and a van).</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename7" value="Home Ground" readonly />
+						<label class="sheet-playbook_move_text">Your crew made a point of keeping the locals happy - keeping them safe, ensuring things always went down okay. When you're back in your old neighbourhood, you can always find people who will hide you or help you with a minor favour, no questions asked.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_CrookedmoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename8" value="Notorious" readonly />
+						<label class="sheet-playbook_move_text">You have a reputation from your criminal past. When you reveal who you are, your terrifying reputation counts as a reason for people to do what you ask, for the manipulate someone move. Revealing your identity to someone can create other problems later, of course.</label>
+					</div>
+				</div>
+				<div class="sheet-Divine">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Divinemovename1" value="Boss from Beyond" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Divinemovename1}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">At the beginning of each mystery, roll +Weird.<br>On a 10+, your Superiors ask you to do something simple.<br>On a 7-9, they ask you to do something complicated or difficult.<br>In either case, you get to ask them one of the questions from the investigate a mystery move right now.<br>On a miss, you are required to do something terrible. If you do not accomplish what they've ordered, you cannot use this move again until you have made up for your failure.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Divinemovename2" value="Angel Wings" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Divinemovename2}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You can go instantly to anywhere you've visited before, or to a person you know well. When you carry one or two people with you, roll +Weird.<br>On a 10+ you all go where you wanted.<br>On a 7-9, you don't quite manage it. Either you are all separated, or you all appear in the wrong place.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Divinemovename3" value="What I Need, When I Need It" readonly />
+						<label class="sheet-playbook_move_text">You may store any small object you own, putting it into a magical space nobody can get to. You may retrieve anything you stored at any time; it appears in your hand.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Divinemovename4" value="Smite" readonly />
+						<label class="sheet-playbook_move_text">Your body and divine weapon always count as a weakness against the monsters you fight. Your unarmed attacks are 2-harm intimate hand messy.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename5" value="Soothe" readonly />
+						<label class="sheet-playbook_move_text">When you talk to someone for a few seconds in a quiet voice, you can calm them down, blocking any panic, anger, or other negative emotions they have. This works even if the thing that freaked them out is still present, as long as your voice can be heard.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename6" value="Lay On Hands" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Divinemovename6}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">Your touch can heal injury and disease. When you lay your hands on someone hurt, roll +Cool.<br>On a 10+, heal 2 harm or an illness,plus they're stabilized.<br>On a 7-9, you can heal the harm or illness as on a 10+, but you take it into yourself.<br>On a miss, your aura causes them extra harm.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_DivinemoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename7" value="Cast Out Evil" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Divinemovename7}}} {{roll_mod=[[@{Tough}]]}} {{result=[[2d6 + @{Tough}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You may banish an unnatural creature from your presence. Roll +Tough.<br>On a 10+ it is banished.<br>On a 7-9 it takes a little while for the banishing to take effect—the creature has time to make one or two actions. <br>Either way, the banished creature is unharmed, and you have no control over where it goes. On a miss, something is keeping it here. That's bad.<br>This move may be used on unnatural hunters (e.g. the Monstrous).</label>
+					</div>
+				</div>
+				<div class="sheet-Expert">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Expertmovename1" value="I've Read About This Sort of Thing" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename1}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">Roll +Sharp instead of +Cool when you act under pressure.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Expertmovename2" value="Often Right" readonly />
+						<label class="sheet-playbook_move_text">When a hunter comes to you for advice about a problem, give them your honest opinion and advice. If they take your advice, they get +1 ongoing while following your advice, and you mark experience.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Expertmovename3" value="Preparedness" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename3}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you need something unusual or rare, roll +Sharp.<br>On a 10+, you have it here right now. <br>On a 7-9 you have it, but not here: it will take some time to get it. <br>On a miss, you know where it is, but it's somewhere real bad.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Expertmovename4" value="It Wasn't As Bad As It Looked" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename4}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">Once per mystery, you may attempt to keep going despite your injuries. Roll +Cool. <br>On a 10+, heal 2 harm and stabilize your wounds.<br>On a 7-9 you may either stabilize or heal 1 harm. <br>On a miss, it was worse than it looked: the Keeper may inflict a harm move on you, or make your wounds unstable.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename5" value="Precise Strike" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename5}}} {{roll_mod=[[@{Tough}]]}} {{result=[[2d6 + @{Tough}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you inflict harm on a monster, you can aim for a weak spot. Roll +Tough. <br>On a 10+ you inflict +2 harm. <br>On a 7-9 you inflict +1 harm.<br>On a miss, you leave yourself open to the monster.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename6" value="The Woman (or Man) With The Plan" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename6}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">At the beginning of each mystery, roll +Sharp.<br>On a 10+ hold 2, on a 7-9 hold 1. <br>Spend the hold to be where you need to be, prepared and ready.<br>On a miss, the Keeper holds 1 they can spend to put you in the worst place, unprepared and unready.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ExpertmoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename7" value="Dark Past" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Expertmovename7}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">If you trawl through your memories for something relevant to the case at hand, roll +Weird.<br>On a 10+ ask the Keeper two questions from the list below. On a 7-9 ask one.<br>On a miss, you can ask a question anyway but that will mean you were personally complicit in creating the situation you are now dealing with.<br>The questions are:
+						<ul>
+							<li class="sheet-squares">When I dealt with this creature (or one of its kind), what did I learn?</li>
+							<li class="sheet-squares">What black magic do I know that could help here?</li>
+							<li class="sheet-squares">Do I know anyone who might be behind this?</li>
+							<li class="sheet-squares">Who do I know who can help us right now?</li>
+						</ul></label>
+					</div>
+				</div>
+				<div class="sheet-Flake">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Flakemovename1" value="Connect the Dots" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Flakemovename1}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">At the beginning of each mystery, if you look for the wider patterns that current events might be part of, roll +Sharp.<br>On a 10+ hold 3, and on a 7-9 hold 1.<br>
+						Spend your hold during the mystery to ask the Keeper any one of the following questions:
+						<ul>
+							<li class="sheet-squares">Is this person connected to current events more than they are saying?</li>
+							<li class="sheet-squares">When and where will the next critical event occur?</li>
+							<li class="sheet-squares">What does the monster want from this person?</li>
+							<li class="sheet-squares">Is this connected to previous mysteries we have investigated?</li>
+							<li class="sheet-squares">How does this mystery connect to the bigger picture?</li>
+						</ul></label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Flakemovename2" value="Crazy Eyes" readonly />
+						<label class="sheet-playbook_move_text">You get +1 Weird (Max +3)</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Flakemovename3" value="See, it all fits together" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Flakemovename3}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You can use Sharp instead of Charm when you manipulate someone.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Flakemovename4" value="Suspicious Mind" readonly />
+						<label class="sheet-playbook_move_text">If someone lies to you, you know it.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename5" value="Often Overlooked" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Flakemovename5}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you act all crazy to avoid something, roll +Weird.<br>On a 10+ you're regarded as unthreatening and unimportant.<br>On a 7-9, pick either unthreatening or unimportant.<br>On a miss, you draw lots (but not all) of the attention.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename6" value="Contrary" readonly />
+						<label class="sheet-playbook_move_text">When you seek out and receive someone's honest advice on the best course of action for you and then do something else instead, mark experience. If you do exactly the opposite of their advice, you also take +1 ongoing on any moves you make pursuing that course.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_playbookmovename7" value=" Net Friends" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Flakemovename7}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You know a lot of people on the Internet. When you contact a net friend to help you with a mystery, roll +Charm.<br>On a 10+, they're available and helpful -- they can fix something, break a code, hack a computer, or get you some special information.<br>On a 7-9, they're prepared to help, but it's either going to take some time or you're going to have to do part of it yourself.<br>On a miss, you burn some bridges.
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_FlakemoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Flakemovename4" value="Sneaky" readonly />
+						<label class="sheet-playbook_move_text">When you attack from ambush, or from behind, inflict +2 harm.</label>
+					</div>
+				</div>
+				<div class="sheet-Initiate">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename1" value="Sect" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Initiatemovename1}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you are in good standing with your Sect, at the beginning of each mystery, roll +Charm.<br>On a 10+ they provide some useful info or help in the field.<br>On a 7-9 you get a mission associated with the mystery, and if you do it you'll get some info or help too.<br>On a miss, they ask you to do something bad.<br>If you fail a mission or refuse an order, you'll be in trouble with the Sect until you atone.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename2" value="Ancient Fighting Arts" readonly />
+						<label class="sheet-playbook_move_text">When using an old-fashioned hand weapon, you inflict +1 harm and get +1 whenever you roll protect someone.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename3" value="Mystic" readonly />
+						<label class="sheet-playbook_move_text">Every time you successfully use magic, take +1 forward.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename4" value="Fortunes" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Initiatemovename4}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">The Sect has ancient prophecies or divination techniques to predict the future. Once per mystery, you may use them. If you look at what the future holds, roll +Weird.<br>On a 10+ hold 3, and on a 7-9 hold 1. On a miss, you get bad information and the Keeper decides how that affects you.<br>Spend your hold to:
+						<ul>
+							<li class="sheet-squares">Have a useful object ready.</li>
+							<li class="sheet-squares">Be somewhere you are needed, just in time.</li>
+							<li class="sheet-squares">Take +1 forward, or give +1 forward to another hunter.</li>
+							<li class="sheet-squares">retroactively warn someone about an attack, so that it doesn't happen.</li>
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename5" value="Sacred Oath" readonly />
+						<label class="sheet-playbook_move_text">You may bind yourself to a single goal, forsaking something during your quest (e.g. speech, all sustenance but bread and water, alcohol, lying, sex, etc). Get the Keeper's agreement on this —- it should match the goal in importance and difficulty. While you keep your oath and work towards your goal, mark experience at the end of every session and get +1 on any rolls that directly help achieve the goal. If you break the oath, take -1 ongoing until you have atoned.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename6" value="Mentor" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Initiatemovename6}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You have a mentor in the Sect: name them. When you contact your mentor for info, roll +Sharp.<br>On a 10+, you get an answer to your question, no problem.<br>On a 7-9 you choose: they're either busy and can't help, or they answer the question but you owe a favour.<br>On a miss, your question causes trouble.<br></label>
+						<label>Mentor's Name: <input type="text" class="sheet-inlinetext" name="attr_mentorsname"></label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename7" value="Apprentice" readonly />
+						<label class="sheet-playbook_move_text">You have an apprentice: name them. Your job is to teach them the Sect's ways. They count as an ally: subordinate (motivation: to follow your instructions to the letter).</label>
+						<label>Apprentice's Name: <input type="text" class="sheet-inlinetext" name="attr_apprenticename"></label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename8" value="Helping Hand" readonly />
+						<label class="sheet-playbook_move_text">When you successfully help out another hunter, they get +2 instead of the usual +1.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_InitiatemoveEnabled9">
+						<input type="text" class="sheet-pbmovename" name="attr_Initiatemovename9" value="The Old Black Magic" readonly />
+						<label class="sheet-playbook_move_text">When you use magic, you can ask a question from the investigate a mystery move as your effect.</label>
+					</div>
+				</div>
+				<div class="sheet-Monstrous">
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">You get all the basic moves, plus pick two Monstrous moves:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename" value="Immortal" readonly />
+						<label class="sheet-playbook_move_text">You do not age or sicken, and whenever you suffer harm you suffer 1-harm less.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename2" value="Unnatural Appeal" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Monstrousmovename2}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">Roll +Weird instead of +Charm when you <b>manipulate someone</b>.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename3" value="Unholy Strength" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Monstrousmovename3}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">Roll +Weird instead of +Tough when you <b>kick some ass</b>.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename4" value="Incorporeal" readonly />
+						<label class="sheet-playbook_move_text">You may move freely through solid objects (but not people).</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename5" value="Preternatural Speed" readonly />
+						<label class="sheet-playbook_move_text">You go much faster than normal people. <b>When you chase, flee, or run</b> take +1 ongoing.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename6" value="Claws of the Beast" readonly />
+						<label class="sheet-playbook_move_text">All your natural attacks get +1 harm.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename7" value="Mental Dominion" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Monstrousmovename7}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">When you gaze into a normal human's eyes and <b>exert your will</b> over them, roll +Charm. On a 10+, hold 3. On a 7-9, hold 1. You may spend your hold to give them an order. Regular people will follow your order, whatever it is. Hunters can choose whether they do it or not. If they do, they mark experience.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename8" value="Unquenchable Vitality" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Monstrousmovename8}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">When you have taken harm, <b>you can heal yourself</b>. Roll +Cool. On a 10+, heal 2-harm and stabilise your injuries. On a 7-9, heal 1-harm and stabilise your injuries. On a miss, your injuries worsen.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled9">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename9" value="Dark Negotiator" readonly />
+						<label class="sheet-playbook_move_text">You can use the <b>manipulate someone</b> move on monsters as well as people, if they can reason and talk.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled10">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename10" value="Flight" readonly />
+						<label class="sheet-playbook_move_text">You can fly.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled11">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename11" value="Shapeshifter" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Monstrousmovename11}}} {{roll_mod=[[@{Sharp} +1]]}} {{result=[[2d6 + @{Sharp} +1]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">You may change your form (usually into an animal). Decide if you have just one alternate form or several, and detail them. You gain +1 to <b>investigate a mystery</b> when using an alternate form's superior senses (e.g. smell for a wolf, sight for an eagle).</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MonstrousMoveEnabled12">
+						<input type="text" class="sheet-pbmovename" name="attr_Monstrousmovename12" value="Something Borrowed" readonly />
+						<label class="sheet-playbook_move_text">Take a move from a hunter playbook that is not currently in play.</label>
+					</div>
+				</div>
+				<div class="sheet-Mundane">
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">You get all the basic moves, plus pick three Mundane moves:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename" value="Always The Victim" readonly />
+						<label class="sheet-playbook_move_text">When another hunter uses <b>protect someone</b> to protect you, they mark expe- rience. Whenever a monster captures you, you mark experience.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled1">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename1" value="Oops!" readonly />
+						<label class="sheet-playbook_move_text">When another hunter uses <b>protect someone</b> to protect you, they mark expe- rience. Whenever a monster captures you, you mark experience.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnable2d">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename2" value="Let's Get Out Of Here!" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Mundanemovename2}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">If you can <b>protect someone</b> by telling them what to do, or by leading them out, roll +Charm instead of +Tough.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename3" value="Panic Button" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Mundanemovename3}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">When you need to escape, <b>name the route you'll try</b> and roll +Sharp. On a 10+ you're out of danger, no problem. On a 7-9 you can go or stay, but if you go it's going to cost you (you leave some- thing behind or something comes with you). On a miss, you are caught halfway out.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename4" value="The Power of Heart" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Mundanemovename4}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">When fighting a monster, if you <b>help someone</b>, don't roll +Cool. You automat- ically help as though you'd rolled a 10.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename5" value="Trust Me" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Mundanemovename5}}} {{roll_mod=[[@{Charm}]]}} {{result=[[2d6 + @{Charm}]]}}' name='roll_move'></button>
+						<label class="sheet-playbook_move_text">When <b>you tell a normal person the truth in order to protect them from danger</b>, roll +Charm. On a 10+ they'll do what you say they should, no questions asked. On a 7-9 they do it, but the Keeper chooses one from:
+							<ul>
+								<li>• They ask you a hard question first.</li>
+								<li>• They stall and dither a while.</li>
+								<li>• They have a "better" idea.</li>
+							</ul>
+							On a miss, they're going to think you're crazy and maybe dangerous too.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename6" value="What Could Go Wrong" readonly />
+						<label class="sheet-playbook_move_text">Whenever you <b>charge into immediate danger</b> without hedging your bets, hold 2. You may spend your hold to:
+							<ul>
+								<li>• Inflict +1 harm.</li>
+								<li>• Reduce someone's harm suffered by 1.</li>
+								<li>• Take +2 forward on an act under pressure roll.</li>
+							</ul>
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_MundaneMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Mundanemovename7" value="Don't Worry, I'll Check It Out" readonly />
+						<label class="sheet-playbook_move_text">Whenever <b>you go off by yourself</b> to check out somewhere (or some- thing) scary, mark experience.</label>
+					</div>
+				</div>
+				<div class="sheet-Professional">
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">You get all the basic moves and four Professional moves. You have this one:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename" value="Agency" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Professionalmovename}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you <b>deal with the Agency</b>, requesting help or gear, or making excuses for a failure, roll +Sharp. On a 10+, you're good —- your request for gear or personnel is okayed, or your slip-up goes unnoticed. On a 7-9, things aren't so great. You might get chewed out by your superiors and there'll be fallout, but you get what you need for the job. On a miss, you screwed up: you might be suspended or under investigation, or just in the doghouse. You certainly aren't going to get any help until you sort it all out.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">Plus pick three of these:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename2" value="Bottle It Up" readonly />
+						<label class="sheet-playbook_move_text">If you want, you can take up to +3 bonus when you <b>act under pressure</b>. For each +1 you use, the Keeper holds 1. That hold can be spent later — one for one — to give you -1 on any move except <b>act under pressure</b>.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename3" value="Unfazeable" readonly />
+						<label class="sheet-playbook_move_text">Take +1 Cool (max +3).</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename4" value="Battlefield Awareness" readonly />
+						<label class="sheet-playbook_move_text">You always know what's happening around you, and what to watch out for. Take +1 armour (max 2-armour) on top of whatever you get from your gear.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename5" value="Leave No One Behind" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Professionalmovename5}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">In combat, when <b>you help someone escape</b>, roll +Sharp. On a 10+ you get them out clean. On a 7-9, you can either get them out or suffer no harm, you choose. On a miss, you fail to get them out and you've attracted hostile attention.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename6" value="Tactical Genius" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Professionalmovename6}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you <b>read a bad situation</b>, you may roll +Cool instead of +Sharp</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename7" value="Medic" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Professionalmovename7}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You have a full first aid kit, and the training to heal people. <b>When you do first aid</b>, roll +Cool. On a 10+ the patient is stabilized and healed of 2 harm. On a 7-9 choose one: heal 2 harm or stabilize the injury. On a miss, you cause an extra 1 harm. This move takes the place of regular first aid.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_ProfessionalMoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Professionalmovename8" value="Mobility" readonly />
+						<label class="sheet-playbook_move_text">You have a truck, van, or car built for monster hunting.</label>
+						<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Vehicle Attributes</label>
+						<div>
+							<input type='checkbox' class='sheet-feature' style="display: none;"><label class="sheet-playbook_move_text">Choose two good things and one bad thing about it.</label>
+							<label class="sheet-playbook_move_text">Good things:</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9"><label class="sheet-playbook_move_text">roomy;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9a"><label class="sheet-playbook_move_text">surveillance gear;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9b">
+							<label class="sheet-playbook_move_text">fast;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9c">
+							<label class="sheet-playbook_move_text">stealthy;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9d">
+							<label class="sheet-playbook_move_text">intimidating;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9e">
+							<label class="sheet-playbook_move_text">classic;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9f">
+							<label class="sheet-playbook_move_text">medical kit;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9g">
+							<label class="sheet-playbook_move_text">sleeping space;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9h">
+							<label class="sheet-playbook_move_text">toolkit;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9i">
+							<label class="sheet-playbook_move_text">concealed weapons;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9j">
+							<label class="sheet-playbook_move_text">anonymous;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9k">
+							<label class="sheet-playbook_move_text">armoured (+1 armour inside);</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9l">
+							<label class="sheet-playbook_move_text">tough;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9m">
+							<label class="sheet-playbook_move_text">monster cage.</label><br>
+							<label class="sheet-playbook_move_text">Bad things:</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9n">
+							<label class="sheet-playbook_move_text">loud;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9o">
+							<label class="sheet-playbook_move_text">obvious;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9p">
+							<label class="sheet-playbook_move_text">temperamental;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9q">
+							<label class="sheet-playbook_move_text">beaten-up;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9r">
+							<label class="sheet-playbook_move_text">gas-guzzler;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9s">
+							<label class="sheet-playbook_move_text">uncomfortable;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9t">
+							<label class="sheet-playbook_move_text">slow;</label><br>
+							<input type="checkbox" class="sheet-feature" name="attr_ProfessionalMoveEnabled9u">
+							<label class="sheet-playbook_move_text">old;</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-Spell-Slinger">
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">You get all the basic moves and four Spell-slinger moves. You have this one:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename" value="Tools and Techniques" readonly />
+						<label class="sheet-playbook_move_text">To use your combat magic effectively, you rely on a collection of tools and techniques. Select three of these four:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename2" value="Consumables" readonly />
+						<label class="sheet-playbook_move_text">You need certain supplies—powders, oils, etc—on hand, some will be used up each cast. If you don't have them, take 1-harm ignore-armour when you cast.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename3" value="Foci" readonly />
+						<label class="sheet-playbook_move_text">You need wands, staves, and other obvious props to focus. If you don't have what you need, your combat magic does 1 less harm.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename4" value="Gestures" readonly />
+						<label class="sheet-playbook_move_text">You need to wave your hands around to use combat magic. If you're restrained, take -1 ongoing for combat magic.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename5" value="Incantations" readonly />
+						<label class="sheet-playbook_move_text">You must speak in an arcane language to control your magic. If you use combat magic without speaking, <b>act under pressure</b> to avoid scrambling your thoughts.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">Plus pick three of these:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename6" value="Advanced Arcane Training" readonly />
+						<label class="sheet-playbook_move_text">If you have two of your three Tools and Techniques at the ready, you may ignore the third one.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename7" value="Arcane Reputation" readonly />
+						<label class="sheet-playbook_move_text">Pick three big organizations or groups in the supernatural community, which can include some of the more sociable types of monsters. They've heard of you and respect your power. With affected humans, take +1 forward when you <b>manipulate</b> them. You may <b>manipulate</b> affected monsters as if they were human, with no bonus.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename8" value="Could've Been Worse" readonly />
+						<label class="sheet-playbook_move_text">When you miss a <b>use magic</b> roll you can choose one of the following options instead of losing control of the magic:
+							<ul>
+								<li class="sheet-squares"><b>Fizzle:</b> The preparations and materials for the spell are ruined. You'll have to start over from scratch with the prep time doubled.</li>
+								<li class="sheet-squares"><b>This Is Gonna Suck:</b> The effect happens, but you trigger all of the listed glitches but one. You pick the one you avoid.</li>
+							</ul>
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled9">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename9" value="Enchanted Clothing" readonly />
+						<label class="sheet-playbook_move_text">Pick an article of every-day clothing–it's enchanted without any change in appearance. Take -1 harm from any source that tries to get at you through the garment.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled10">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename10" value="Forensic Divination" readonly />
+						<label class="sheet-playbook_move_text">When you successfully <b>investigate a mystery</b>, you may ask "What magic was done here?" as a free extra question.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled11">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename11" value="Go Big or Go Home" readonly />
+						<label class="sheet-playbook_move_text">When you must <b>use magic</b> as a requirement for Big Magic, take +1 ongoing to those <b>use magic</b> rolls.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled12">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename12" value="Not My Fault" readonly />
+						<label class="sheet-playbook_move_text">+1 to <b>act under pressure</b> when you are dealing with the consequences of your own spell-casting.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled13">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename13" value="Practitioner" readonly />
+						<label class="sheet-playbook_move_text">Choose two effects available to you under <b>use magic</b>. Take +1 to <b>use magic</b> whenever you choose one of those effects.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled14">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename14" value="Shield Spell" readonly />
+						<label class="sheet-playbook_move_text">When you <b>protect someone</b>, gain 2-armour against any harm that is transferred to you. This doesn't stack with your other armour, if any.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpellSlingerMoveEnabled15">
+						<input type="text" class="sheet-pbmovename" name="attr_Spellslingermovename15" value="Third Eye" readonly />
+						<label class="sheet-playbook_move_text">When you <b>read a bad situation</b>, you can <b>open up your third eye</b> for a moment to take in extra information. Take +1 hold on any result of 7 or more, plus you can see invisible things. On a miss, you may still get 1 hold, but you're exposed to super- natural danger. Unfiltered hidden reality is rough on the mind!</label>
+					</div>
+				</div>
+				<div class="sheet-Spooky">
+					<div class="sheet-pbmove">
+						<label class="sheet-playbook_move_text">You get all the basic moves, plus pick three Spooky moves:</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename1" value="Telepathy" readonly />
+						<label class="sheet-playbook_move_text">You can read people's thoughts and put words in their mind. This can allow you to <b>investigate a mystery</b> or <b>read a bad</b> situation without needing to actually talk. You can also <b>manipulate someone</b> without speaking. You still roll moves as normal, except people will not expect the weirdness of your mental communication.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename2" value="Hex" readonly />
+						<label class="sheet-playbook_move_text"> When you cast a spell (with <b>use magic</b>), as well as the normal effects, you may pick from the following:
+							<ul>
+								<li class="sheet-squares">The target contracts a disease.</li>
+								<li class="sheet-squares">The target immediately suffers harm (2-harm magic ignore-armour).</li>
+								<li class="sheet-squares">The target breaks something precious or important.</li>
+							</ul>
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename3" value="The Sight" readonly />
+						<label class="sheet-playbook_move_text">You can see the invisible, especially spirits and magical influences. You may communicate with (maybe even make deals with) the spirits you see, and they give you more opportunities to spot clues when you <b>investigate a mystery</b>.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename4" value="Premonitions" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Spookymovename4}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text"><b>At the start of each mystery</b>, roll +Weird. On a 10+, you get a detailed vision of something bad that is yet to happen. You take +1 forward to prevent it coming true, and mark experience if you stop it. On a 7-9+ you get clouded images of something bad that is yet to happen: mark experience if you stop it. On a miss, you get a vision of something bad happening to you and the Keeper holds 3, to be spent one-for-one as penalties to rolls you make.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename5" value="Hunches" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Spookymovename5}}} {{roll_mod=[[@{Sharp}]]}} {{result=[[2d6 + @{Sharp}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text"><b>When something bad is happening</b> (or just about to happen) somewhere that you aren't, roll +Sharp. On a 10+ you knew where you needed to go, just in time to get there. On a 7-9, you get there late—in time to intervene, but not prevent it altogether. On a miss, you get there just in time to be in trouble yourself.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename6" value="Tune In" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Spookymovename6}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You can <b>attune your mind to a monster or minion</b> Roll +Weird. On a 10+, hold 3. On a 7-9, hold 1. On a miss, the monster becomes aware of you. Spend one hold to ask the Keeper one of the following questions, and gain +1 ongoing while acting on the answers:
+							<ul>
+								<li class="sheet-squares">Where is the creature right now?</li>
+								<li class="sheet-squares">What is it planning to do right now?</li>
+								<li class="sheet-squares">Who is it going to attack next?</li>
+								<li class="sheet-squares">Who does it regard as the biggest threat?</li>
+								<li class="sheet-squares">How can I attract its attention?</li>
+							</ul>
+						</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename7" value="The Big Whammy" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Spookymovename7}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You can use your powers to <b>kick some ass</b>: roll +Weird instead of +Tough. The attack has 2-harm close obvious ignore-armour. On a miss, you'll get a magical backlash.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_SpookyMoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Spookymovename8" value="Jinx" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Spookymovename8}}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">You can encourage coincidences to occur, the way you want. <b>When you jinx a target</b>, roll +Weird. On a 10+ hold 2 and on a 7-9 hold 1. On a miss, the Keeper holds 2 over you to be used in the same way. Spend your hold to:
+							<ul>
+								<li class="sheet-squares">Interfere with a hunter, giving them -1 forward.</li>
+								<li class="sheet-squares">Help a hunter, giving them +1 forward, by interfering with their enemy.</li>
+								<li class="sheet-squares">Interfere with what a monster, minion, or bystander is trying to do.</li>
+								<li class="sheet-squares">Inflict 1-harm on the target due to an accident.</li>
+								<li class="sheet-squares">The target finds something you left for them.</li>
+								<li class="sheet-squares">The target loses something that you will soon find.</li>
+							</ul>
+						</label>
+					</div>
+				</div>
+				<div class="sheet-Wronged">
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled" checked disabled>
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename1" value="I Know My Prey" readonly />
+						<label class="sheet-playbook_move_text">You get +1 ongoing when knowingly investigating, pursuing or fighting the breed of monster that caused your loss.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled2">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename2" value="Berserk" readonly />
+						<label class="sheet-playbook_move_text">No matter how much harm you take, you can always keep going until the current fight is over. During a fight, the Keeper may not use harm moves on you and you cannot die. When the fight ends, all harm takes effect as normal.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled3">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename3" value="NEVER AGAIN" readonly />
+						<label class="sheet-playbook_move_text">In combat, you may choose to <b>protect someone</b> without rolling, as if you had rolled a 10+, but you may not choose to "suffer little harm."</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled4">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename4" value="What Does Not Kill Me..." readonly />
+						<label class="sheet-playbook_move_text">If you have suffered harm in a fight, you gain +1 ongoing until the fight is over.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled5">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename5" value="Fervor" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Wrongedmovename5}}} {{roll_mod=[[@{Tough}]]}} {{result=[[2d6 + @{Tough}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you <b>manipulate someone</b>, roll +Tough instead of +Charm.</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled6">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename6" value="Safety First" readonly />
+						<label class="sheet-playbook_move_text">You have jury-rigged extra protection into your gear, giving you +1 armour (maximum 2-armour).</label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled7">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename7" value="DIY Surgery" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Wrongedmovename7}}} {{roll_mod=[[@{Cool}]]}} {{result=[[2d6 + @{Cool}]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">When you do <b>quick and dirty first aid on someone</b> (including yourself), roll +Cool. On a 10+ it's all good, it counts as normal first aid, plus stabilize the injury and heal 1 harm. On a 7-9 it counts as normal first aid, plus one of these, your choice:
+						<ul>
+							<li class="sheet-squares">Stabilise the injury but the patient takes -1 forward.</li>
+							<li class="sheet-squares">Heal 1-harm and stabilise for now, but it will return as 2-harm and become unstable again later.</li>
+							<li class="sheet-squares">Heal 1-harm and stabilise but the patient takes -1 ongoing until it's fixed properly.</li>
+						</ul></label>
+					</div>
+					<div class="sheet-pbmove">
+						<input type="checkbox" class="sheet-PBMoveEnabled" name="attr_WrongedMoveEnabled8">
+						<input type="text" class="sheet-pbmovename" name="attr_Wrongedmovename8" value="Tools Matter" readonly />
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{Wrongedmovename8}}} {{roll_mod=[[@{Tough}+1]]}} {{result=[[2d6 + @{Tough}+1]]}}' name='roll_move'></button> 
+						<label class="sheet-playbook_move_text">With your signature weapon (see your gear, below), you get +1 to <b>kick some ass</b>.</label>
+					</div>
+				</div>
+        	<label class="sheet-other-moves sheet-section-title">Other Moves:</label>
+			<fieldset class="repeating_othermoves">            
+ 			     <label class="sheet-movename">Move:</label>
+ 			     <input type="text" name="attr_movename" /> 
+ 			     <label class="sheet-stat">Stat:</label>
+			     <select class="sheet-movestat" name="attr_moves" class="sheet-moves">                
+			          <option value="@{charm}">Charm</option>
+			          <option value="@{cool}">Cool</option>
+			          <option value="@{sharp}">Sharp</option>
+					  <option value="@{tough}">Tough</option>
+			          <option value="@{weird}">Weird</option>
+			      </select>
+			     <button type='roll' class="align-right" value='&{template:MotW} {{name=@{character_name}}} {{roll_name=@{movename}}} {{roll_mod=[[@{moves}]]}} {{result=[[2d6 + @{moves}]]}}' name='roll_move'></button>     
+ 			     <label class="sheet-desc">Description:</label>
+  			      <textarea rows="4" cols="50" name="attr_movedesc" ></textarea>
+			</fieldset>	
+
+        </div>
+    <!--</div>
+    <div class="sheet-2colrow">   -->       
+        <div class="sheet-col">
+		<label class="sheet-section-title">Harm:</label>
+				<div class="sheet-tracker">
+					<label class="sheet-harm">Okay   </label><input type="checkbox" name="attr_sheet-harm-1" />
+					<input type="checkbox" name="attr_sheet-harm-2" />
+					<input type="checkbox" name="attr_sheet-harm-3" /><label class="sheet-harm">|</label>
+					<input type="checkbox" name="attr_sheet-harm-4" />
+					<input type="checkbox" name="attr_sheet-harm-5" />
+					<input type="checkbox" name="attr_sheet-harm-6" />
+					<input type="checkbox" name="attr_sheet-harm-7" /><label class="sheet-harm">Dying</label>
+				</div>
+				<div class="sheet-tracker">
+					<label class="sheet-harm">Unstable   </label> <input type="checkbox" name="attr_unstable" />
+				</div>
+		<label class="sheet-section-title">Luck:</label>
+				<div class="sheet-tracker">
+					<label class="sheet-luck">Okay </label><input type="checkbox" name="attr_sheet-luck-1" />
+					<input type="checkbox" name="attr_sheet-luck-2" />
+					<input type="checkbox" name="attr_sheet-luck-3" />
+					<input type="checkbox" name="attr_sheet-luck-4" />
+					<input type="checkbox" name="attr_sheet-luck-5" />
+					<input type="checkbox" name="attr_sheet-luck-6" />
+					<input type="checkbox" name="attr_sheet-luck-7" /><label class="sheet-luck">Doomed</label>
+				</div>		
+        	<div class="sheet-box">
+				<input type="checkbox" name="attr_playbook" class="sheet-isChosen" value='Chosen' style="display: none;" />
+				<div class="sheet-Chosen">
+					<label class="sheet-section-title">Fate:</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Fate</label>
+					<hr>
+                    <div>
+                        <label class='sheet-featurelabel'>How you found out:</label><br>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Nightmares"><label>Nightmares and Visions</label><br></div>
+						<div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Weirdo"><label>Some Weirdo Told you</label><br></div>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Cult"><label>An ancient cult found you</label><br></div>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Nemesis"><label>Sought out by your Nemesis</label><br></div>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Monsters"><label>Attacked by monsters</label><br></div>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Birth"><label>Trained from birth</label><br></div></label>
+                        <div><input type='radio' name='attr_FateFound' class='sheet-feature' value="Prophecy"><label>You found the prophecy</label><br></div>
+                    </div>
+					<div>
+						<label class='sheet-featurelabel'>Heroic Labels (Pick 2)</label><br>
+						<input type='checkbox' name='attr_FateHeroic1' class='sheet-feature'><label>Sacrifice</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic2' class='sheet-feature'><label>You are the champion</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic3' class='sheet-feature'><label>Visions</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic4' class='sheet-feature'><label>Secret Training</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic5' class='sheet-feature'><label>Magical Powers</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic6' class='sheet-feature'><label>Mystical Inheritance</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic7' class='sheet-feature'><label>A normal life</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic8' class='sheet-feature'><label>True Love</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic9' class='sheet-feature'><label>Secret Training</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic10' class='sheet-feature'><label>You can save the world</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic11' class='sheet-feature'><label>Hidden allies</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic12' class='sheet-feature'><label>The end of monsters</label><br></label>
+						<input type='checkbox' name='attr_FateHeroic13' class='sheet-feature'><label>Divine Help</label><br></label>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Doom Labels (Pick 2)</label><br>
+						<input type='checkbox' name='attr_FateDoom1' class='sheet-feature'><label>Death</label><br>
+						<input type='checkbox' name='attr_FateDoom2' class='sheet-feature'><label>You can't save everyone</label><br>
+						<input type='checkbox' name='attr_FateDoom3' class='sheet-feature'><label>Impossible love</label><br>
+						<input type='checkbox' name='attr_FateDoom4' class='sheet-feature'><label>Failure</label><br>
+						<input type='checkbox' name='attr_FateDoom5' class='sheet-feature'><label>A Nemesis</label><br>
+						<input type='checkbox' name='attr_FateDoom6' class='sheet-feature'><label>No Normal Life</label><br>
+						<input type='checkbox' name='attr_FateDoom7' class='sheet-feature'><label>Loss of loved ones</label><br>
+						<input type='checkbox' name='attr_FateDoom8' class='sheet-feature'><label>Treachery</label><br>
+						<input type='checkbox' name='attr_FateDoom9' class='sheet-feature'><label>Doubt</label><br>
+						<input type='checkbox' name='attr_FateDoom10' class='sheet-feature'><label>Sympathy for the enemy</label><br>
+						<input type='checkbox' name='attr_FateDoom11' class='sheet-feature'><label>Damnation</label><br>
+						<input type='checkbox' name='attr_FateDoom12' class='sheet-feature'><label>Hosts of Monsters</label><br>
+						<input type='checkbox' name='attr_FateDoom13' class='sheet-feature'><label>The End of Days</label><br>
+						<input type='checkbox' name='attr_FateDoom14' class='sheet-feature'><label>The source of Evil</label><br>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isCrooked" value='Crooked' style="display: none;" />
+				<div class="sheet-Crooked">
+					<div>
+						<label class="sheet-section-title">Underworld:</label>
+						<input type='checkbox' name='attr_lock_Underworld' class='sheet-featurelock'><label>Choose Underworld Background</label>
+						<div>
+							<input type="radio" name="attr_Underworld" class="sheet-feature" value="Target"><label>The target of a job was a dangerous creature. Pick one:
+							<ul>
+								<li class="sheet-squares">Vampire</li>
+								<li class="sheet-squares">Werewolf</li>
+								<li class="sheet-squares">Troll</li>
+								<li class="sheet-squares">Reptiloid</li>
+							</ul>
+							</label>
+							<br>
+							<input type="radio" name="attr_Underworld" class="sheet-feature" value="Work"><label>You worked with someone who was more than they seemed. Pick one:
+							<ul>
+								<li class="sheet-squares">Sorcerer</li>
+								<li class="sheet-squares">Demon</li>
+								<li class="sheet-squares">Faerie</li>
+								<li class="sheet-squares">Psychic</li>
+							</ul>
+							</label>
+							<br>
+							<input type="radio" name="attr_Underworld" class="sheet-feature" value="Hired"><label>You were hired by something weird. Pick one:
+							<ul>
+								<li class="sheet-squares">Immortal</li>
+								<li class="sheet-squares">God</li>
+								<li class="sheet-squares">Outsider</li>
+								<li class="sheet-squares">Witch</li>
+							</ul>
+							</label>
+							<br>
+							<input type="radio" name="attr_Underworld" class="sheet-feature" value="South"><label> Things went south on a job—including, but not limited to, running into (choose one):
+							<ul>
+								<li class="sheet-squares">A horde of goblins</li>
+								<li class="sheet-squares">A hunger of ghouls</li>
+								<li class="sheet-squares">A dream eater</li>
+								<li class="sheet-squares">A salamander</li>
+							</ul>
+							</label>
+						</div>
+					</div>
+					<div>
+						<label class="sheet-section-title">Heat:</label>
+						<input type='checkbox' name='attr_lock_Heat' class='sheet-featurelock'><label>Choose Heat Types</label>
+						<div>
+							<label class="sheet-featurelabel">You didn't get here without making enemies. Pick at least two of these and name the people involved:</label>
+							<input type='checkbox' name='attr_Heat1' class='sheet-feature'><label> A police detective,<input type="text" class="sheet-inlinetext" name="attr_heat1name" maxlength="18">, has made it a personal goal to put you away.</label><br>
+							<input type='checkbox' name='attr_Heat2' class='sheet-feature'><label> You  have  a  rival  from  your  background,<input type="text" class="sheet-inlinetext" name="attr_heat2name" maxlength="18">, who never misses a chance to screw you over.</label><br>
+							<input type='checkbox' name='attr_Heat3' class='sheet-feature'><label> You  pissed  off  a  well-connected  criminal,<input type="text" class="sheet-inlinetext" name="attr_heat3name" maxlength="18">, and they'll do whatever they can to destroy you.</label><br>
+							<input type='checkbox' name='attr_Heat4' class='sheet-feature'><label> <input type="text" class="sheet-inlinetext" name="attr_heat4name" maxlength="18">is someone with special powers, a person or monster, who you took advantage of.</label><br>
+							<input type='checkbox' name='attr_Heat5' class='sheet-feature'><label> <input type="text" class="sheet-inlinetext" name="attr_heat5name" maxlength="18">is an old partner you betrayed in the middle of a job.</label><br>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isDivine" value='Divine' style="display: none;" />
+				<div class="sheet-Divine">
+					<label class="sheet-section-title">Mission:</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Mission</label>
+					<hr>
+                    <div>
+                        <label class='sheet-featurelabel'>You have been put on Earth for this purpose:</label><br>
+                        <div><input type='radio' name='attr_Mission' class='sheet-feature' value="Adversary"><label>You are here to fight the schemes of an Adversary.</label><br></div>
+						<div><input type='radio' name='attr_Mission' class='sheet-feature' value="End of Days"><label> The End of Days approaches. Your role is to guide these hunters and prevent it from coming to pass.</label><br></div>
+                        <div><input type='radio' name='attr_Mission' class='sheet-feature' value="End of Days 2"><label> The End of Days approaches. Your role is to guide these hunters and ensure it comes to pass.</label><br></div>
+                        <div><input type='radio' name='attr_Mission' class='sheet-feature' value="Exiled"><label>You have been exiled. You must work for the cause of Good without drawing attention from your brothers and sisters, as they are bound to execute you for your crimes.</label><br></div>
+                        <div><input type='radio' name='attr_Mission' class='sheet-feature' value="Protect"><label>One of the other hunters has a crucial role to play in events to come. You must prepare them for their role, and protect them at any cost.</label><br></div>
+                    </div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isExpert" value='Expert' style="display: none;" />
+				<div class="sheet-Expert">
+					<label class="sheet-section-title">Haven:</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Haven</label>
+					<hr>
+					<div>
+						<label class='sheet-featurelabel'>You have set up a haven, a safe place to work. Pick three:</label><br>
+						<input type='checkbox' name='attr_Haven1' class='sheet-feature'><label>Lore Library. When you hit the books, take +1 forward to investigate the mystery (as long as historical or reference works are appropriate).</label><br></label>
+						<input type='checkbox' name='attr_Haven2' class='sheet-feature'><label>Mystical Library. If you use your library's occult tomes and grimoires, preparing with your tomes and grimoires, take +1 forward for use magic.</label><br></label>
+						<input type='checkbox' name='attr_Haven3' class='sheet-feature'><label>Protection Spells. Your haven is safe from monsters—they cannot enter. Monsters might be able to do something special to evade the wards, but not easily.</label><br></label>
+						<input type='checkbox' name='attr_Haven4' class='sheet-feature'><label>Armory.<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name="Armory"}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> You have a stockpile of mystical and rare monster-killing weapons and items. If you need a special weapon, roll +Weird.<br>On a 10+ you have it (and plenty if that matters).<br>On a 7-9 you have it, but only the minimum.<br>On a miss, you've got the wrong thing.</label><br></label>
+						<input type='checkbox' name='attr_Haven5' class='sheet-feature'><label>Infirmary. You can heal people, and have the space for one or two to recuperate. The Keeper will tell you how long any patient's recovery is likely to take, and if you need extra supplies or help.</label><br></label>
+						<input type='checkbox' name='attr_Haven6' class='sheet-feature'><label>Workshop. You have a space for building and repairing guns, cars and other gadgets. Work out with the Keeper how long any repair or construction will take, and if you need extra supplies or help.</label><br></label>
+						<input type='checkbox' name='attr_Haven7' class='sheet-feature'><label>Oubliette. This room is isolated from every kind of monster, spirit and magic that you know about. Anything you stash in there can't be found, can't do any magic, and can't get out.</label><br></label>
+						<input type='checkbox' name='attr_Haven8' class='sheet-feature'><label>Panic Room. This has essential supplies and is protected by normal and mystical means. You can hide out there for a few days, safe from pretty much anything.</label><br></label>
+						<input type='checkbox' name='attr_Haven9' class='sheet-feature'><label>Magical Laboratory. You have a mystical lab with all kinds of weird ingredients and tools useful for casting spells (like the use magic move, big magic, and any other magical moves).</label><br></label>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isInitiate" value='Initiate' style="display: none;" />
+				<div class="sheet-Initiate">
+					<label class="sheet-section-title">Sect:</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Sect</label>
+					<div>
+						<input type='checkbox' name='attr_SectInstructions' style="display: none;" class='sheet-feature' unchecked><label>
+						You are part of an ancient, secret order that slays monsters. Where are they from? How old are they? Are they religious? Why do they stay secret? How do they recruit? You also need to pick the Sect's traditions (these will be used by the Keeper to determine the Sect's methods and actions.)</label>
+					<hr>
+					<label class='sheet-featurelabel'>Sect Name: <input type="text" class="sheet-inlinetext" name="attr_Sectname"></label>
+					<div>
+						<label class='sheet-featurelabel'>Good Facets (Pick 2)</label><br>
+						<input type='checkbox' name='attr_GoodFacet1' class='sheet-feature'><label>Knowledgable</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet2' class='sheet-feature'><label>Ancient lore</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet3' class='sheet-feature'><label>Magical lore</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet4' class='sheet-feature'><label>Fighting arts</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet5' class='sheet-feature'><label>Modernised</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet6' class='sheet-feature'><label>Chapters everywhere</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet7' class='sheet-feature'><label>Secular power</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet8' class='sheet-feature'><label>Flexible tactics</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet9' class='sheet-feature'><label>Open hierarchy</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet10' class='sheet-feature'><label>Integrated in society</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet11' class='sheet-feature'><label>Rich</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet12' class='sheet-feature'><label>Nifty gadgets</label><br></label>
+						<input type='checkbox' name='attr_GoodFacet13' class='sheet-feature'><label>Magical items</label><br></label>
+					</div>
+                    <div>
+                        <label class='sheet-featurelabel'>Bad Facet:</label><br>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Motives"><label>Dubious motives</label><br></div>
+						<div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Tradition-bound"><label>Tradition-bound</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Short-sighted"><label>Short-sighted</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Paranoid"><label>Paranoid and secretive</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Heirarchy"><label>Closed hierarchy</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Factionalised"><label>Factionalised</label><br></div></label>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Laws"><label>Strict laws</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Oaths"><label>Mystical oaths</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Obedience"><label>Total obedience</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Leaders"><label>Tyrannical leaders</label><br></div>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Gear"><label>Obsolete gear</label><br></div></label>
+                        <div><input type='radio' name='attr_BadFacet' class='sheet-feature' value="Poor"><label>Poor</label><br></div>
+                    </div>					
+				</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isMonstrous" value='Monstrous' style="display: none;" />
+				<div class="sheet-Monstrous">
+					<label class="sheet-section-title">Monster Breed</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Define your monstrous breed</label>
+					<hr>
+					<div>
+						<label class='sheet-playbook_move_text'>You're half-human, half-monster: decide if you were always this way or if you you were originally human and transformed somehow.</label><br>
+						<label class='sheet-playbook_move_text'>Now decide if you were always fighting to be good, or if you were evil and changed sides.</label><br>
+						<label class='sheet-playbook_move_text'>Define your monstrous breed by picking a curse, moves, and natural attacks.  Create the monster you want to be: whatever you choose defines your breed in the game.</label><br>
+						<label class='sheet-featurelabel'>Curses, pick one</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed1' class='sheet-feature'><label><b>Feed:</b> You must subsist on living humans—it might take the form of blood, brains, or spiritual essence but it must be from people. You need to <b>act under pressure</b> to resist feeding whenever a perfect opportunity presents itself.</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed2' class='sheet-feature'><label><b>Vulnerability:</b> Pick a substance. You suffer +1 harm when you suffer harm from it. If you are bound or surrounded by it, you must <b>act under pressure</b> to use your powers.</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed3' class='sheet-feature'><label><b>Pure Drive:</b> One emotion rules you. Pick from: hunger, hate, anger, fear, jealousy, greed, joy, pride, envy, lust, or cruelty. Whenever you have a chance to indulge that emotion, you must do so immediately, or <b>act under pressure</b> to resist.</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed4' class='sheet-feature'><label><b>Dark Master:</b> You have an evil lord who doesn't know you changed sides. They still give you orders, and they do not tolerate refusal. Or failure.</label><br>
+						<label class='sheet-featurelabel'>Natural Attacks - Pick a Base and add an extra to it, or two Bases.</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed5' class='sheet-feature'><label>Base: teeth (3-harm intimate)</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed6' class='sheet-feature'><label>Base: claws (2-harm hand)</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed7' class='sheet-feature'><label>Base: magical force (1-harm magical close)</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed8' class='sheet-feature'><label>Base: life-drain (1-harm intimate life-drain)</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed9' class='sheet-feature'><label>Extra: Add +1 harm to a base</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed10' class='sheet-feature'><label>Extra: Add ignore-armour to a base</label><br>
+						<input type='checkbox' name='attr_MonstrousBreed11' class='sheet-feature'><label>Extra: Add an extra range to a base (add intimate, hand, or close).</label><br>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isProfessional" value='Professional' style="display: none;" />
+				<div class="sheet-Professional">
+					<label class="sheet-section-title">Agency</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Define your agency</label>
+					<hr>
+					<div>
+						<input type='checkbox' name='attr_ProAgencyDesc' class='sheet-feature' style="display: none;"><label class='sheet-playbook_move_text'>Decide who it is you work for. Are they a black-budget government department, a secret military unit, a clandestine police team, a private individual's crusade, a corporation, a scientific team, or what? Is the Agency's goal to: destroy monsters, study the super- natural, protect people, gain power, or something else? Pick two resource tags for the Agency, and two red tape tags:</label><br>
+						<label class='sheet-featurelabel'>Resources (pick two):</label><br>
+						<input type='checkbox' name='attr_ProAgency1' class='sheet-feature'><label>Well-armed</label><br>
+						<input type='checkbox' name='attr_ProAgency2' class='sheet-feature'><label>Well-financed</label><br>
+						<input type='checkbox' name='attr_ProAgency3' class='sheet-feature'><label>Rigorous Training</label><br>
+						<input type='checkbox' name='attr_ProAgency4' class='sheet-feature'><label>Official pull</label><br>
+						<input type='checkbox' name='attr_ProAgency5' class='sheet-feature'><label>Cover identities</label><br>
+						<input type='checkbox' name='attr_ProAgency6' class='sheet-feature'><label>Offices all over the place</label><br>
+						<input type='checkbox' name='attr_ProAgency7' class='sheet-feature'><label>Good intel</label><br>
+						<input type='checkbox' name='attr_ProAgency8' class='sheet-feature'><label>Recognized authority</label><br>
+						<input type='checkbox' name='attr_ProAgency9' class='sheet-feature'><label>Weird tech gadgets</label><br>
+						<input type='checkbox' name='attr_ProAgency10' class='sheet-feature'><label>Support teams</label><br>
+						<label class='sheet-featurelabel'>Red Tape (pick two):</label><br>
+						<input type='checkbox' name='attr_ProAgency11' class='sheet-feature'><label>Dubious motives</label><br>
+						<input type='checkbox' name='attr_ProAgency12' class='sheet-feature'><label>Bureaucratic</label><br>
+						<input type='checkbox' name='attr_ProAgency13' class='sheet-feature'><label>Secretive hierarchy</label><br>
+						<input type='checkbox' name='attr_ProAgency14' class='sheet-feature'><label>Cryptic missions</label><br>
+						<input type='checkbox' name='attr_ProAgency15' class='sheet-feature'><label>Hostile superiors</label><br>
+						<input type='checkbox' name='attr_ProAgency16' class='sheet-feature'><label>Inter-departmental rivalries</label><br>
+						<input type='checkbox' name='attr_ProAgency17' class='sheet-feature'><label>Budget cuts</label><br>
+						<input type='checkbox' name='attr_ProAgency18' class='sheet-feature'><label>Take no prisoners policy</label><br>
+						<input type='checkbox' name='attr_ProAgency19' class='sheet-feature'><label>Live capture policy</label><br>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isSpell-Slinger" value='Spell-Slinger' style="display: none;" />
+				<div class="sheet-Spell-Slinger">
+					<label class="sheet-section-title">Combat Magic</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Define your combat magic</label>
+					<hr>
+					<div>
+						<button type='roll' value='&{template:MotW} {{name=@{character_name}}} {{roll_name=CombatMagic}} {{roll_mod=[[@{Weird}]]}} {{result=[[2d6 + @{Weird}]]}}' name='roll_move'></button> 
+						<label class='sheet-playbook_move_text'>You have a few attack spells you can use as weapons. When you use these spells to <b>kick some ass</b>, roll +Weird instead of +Tough. Sometimes the situation may require you to <b>act under pressure</b> to cast your spell without problems.</label><br>
+						<label class='sheet-playbook_move_text'>Your combat spells can combine any of your base spells with any of your effects.</label><br>
+						<label class='sheet-featurelabel'>Pick three (with at least one base):</label><br>
+						<label class='sheet-featurelabel'>Bases:</label><br>
+						<input type='checkbox' name='attr_CombatMagic1' class='sheet-feature'><label><b>Blast:</b> 2-harm magic close obvious loud</label><br>
+						<input type='checkbox' name='attr_CombatMagic2' class='sheet-feature'><label><b>Ball:</b> 1-harm magic area close obvious loud</label><br>
+						<input type='checkbox' name='attr_CombatMagic3' class='sheet-feature'><label><b>Missile:</b> 1-harm magic far obvious loud</label><br>
+						<input type='checkbox' name='attr_CombatMagic4' class='sheet-feature'><label><b>Wall:</b> 1-harm magic barrier close 1-armour obvious loud</label><br>
+						<label class='sheet-featurelabel'>Effects:</label><br>
+						<input type='checkbox' name='attr_CombatMagic5' class='sheet-feature'><label><b>Fire:</b> Add "+2 harm fire" to a base. If you get a 10+ on a combat magic roll, the fire won't spread.</label><br>
+						<input type='checkbox' name='attr_CombatMagic6' class='sheet-feature'><label><b>Force or Wind:</b> Add "+1 harm forceful" to a base, or "+1 armour" to a wall.</label><br>
+						<input type='checkbox' name='attr_CombatMagic7' class='sheet-feature'><label><b>Lightning or Entropy:</b> Add "+1 harm messy" to a base.</label><br>
+						<input type='checkbox' name='attr_CombatMagic8' class='sheet-feature'><label><b>Frost or Ice:</b> Adds "-1 harm +2 armour" to a wall, or "+1 harm restraining" to other bases.</label><br>
+						<input type='checkbox' name='attr_CombatMagic9' class='sheet-feature'><label><b>Earth:</b> Add "forceful restraining" to a base.</label><br>
+						<input type='checkbox' name='attr_CombatMagic10' class='sheet-feature'><label><b>Necromantic:</b> Add "life-drain" to a base.</label><br>
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isSpooky" value='Spooky' style="display: none;" />
+				<div class="sheet-Spooky">
+					<label class="sheet-section-title">The Dark Side</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Define your dark side</label>
+					<hr>
+					<div>
+						<label class='sheet-playbook_move_text'>Your powers have an unsavory source, and sometimes you get tempted to do things you shouldn't. These could be orders from whatever granted your power, or urges that bubble up from your subconscious. Something like that. Whatever it is, it's unsettling.</label><br>
+						<label class='sheet-featurelabel'>Pick three tags for your dark side:</label><br>
+						<input type='checkbox' name='attr_DarkSide1' class='sheet-feature'><label>Violence</label><br>
+						<input type='checkbox' name='attr_DarkSide2' class='sheet-feature'><label>Depression</label><br>
+						<input type='checkbox' name='attr_DarkSide3' class='sheet-feature'><label>Secrets</label><br>
+						<input type='checkbox' name='attr_DarkSide4' class='sheet-feature'><label>Lust</label><br>
+						<input type='checkbox' name='attr_DarkSide5' class='sheet-feature'><label>Dark bargain</label><br>
+						<input type='checkbox' name='attr_DarkSide6' class='sheet-feature'><label>Guilt</label><br>
+						<input type='checkbox' name='attr_DarkSide7' class='sheet-feature'><label>Soulless</label><br>
+						<input type='checkbox' name='attr_DarkSide8' class='sheet-feature'><label>Addiction</label><br>
+						<input type='checkbox' name='attr_DarkSide9' class='sheet-feature'><label>Mood swings</label><br>
+						<input type='checkbox' name='attr_DarkSide10' class='sheet-feature'><label>Rage</label><br>
+						<input type='checkbox' name='attr_DarkSide11' class='sheet-feature'><label>Self-destruction</label><br>
+						<input type='checkbox' name='attr_DarkSide12' class='sheet-feature'><label>Greed for power</label><br>
+						<input type='checkbox' name='attr_DarkSide13' class='sheet-feature'><label>Poor impulse control</label><br>
+						<input type='checkbox' name='attr_DarkSide14' class='sheet-feature'><label>Hallucinations</label><br>
+						<input type='checkbox' name='attr_DarkSide15' class='sheet-feature'><label>Pain</label><br>
+						<input type='checkbox' name='attr_DarkSide16' class='sheet-feature'><label>Paranoia</label><br>
+						<label class='sheet-playbook_move_text'>The Keeper can ask you to do nasty things (in accordance with the tags), when your powers need you to. If you do whatever is asked, mark experience. If you don't do it, then your powers are unavailable until the end of the mystery (or until you cave). As you mark off Luck boxes, these requests will get bigger and nastier.</label><br>
+						
+					</div>
+				</div>
+				<input type="checkbox" name="attr_playbook" class="sheet-isWronged" value='Wronged' style="display: none;" />
+				<div class="sheet-Wronged">
+					<label class="sheet-section-title">Who You Lost:</label>
+					<input type='checkbox' name='attr_lock_features' class='sheet-featurelock'><label>Choose Who You Lost</label>
+					<hr>
+					<div>
+						<label class='sheet-featurelabel'>Who did you lose? Pick one or more of:</label><br>
+						<input type='checkbox' name='attr_Lost1' class='sheet-feature'><label>Your parent(s):<input type="text" name="wronged_LostParents"></label><br>
+						<input type='checkbox' name='attr_Lost2' class='sheet-feature'><label>Your sibling(s):<input type="text" name="wronged_LostSiblings"></label><br>
+						<input type='checkbox' name='attr_Lost3' class='sheet-feature'><label>Your spouse/partner:<input type="text" name="wronged_LostSpouse"></label><br>
+						<input type='checkbox' name='attr_Lost4' class='sheet-feature'><label>Your child(ren):<input type="text" name="wronged_LostChild"></label><br>
+						<input type='checkbox' name='attr_Lost5' class='sheet-feature'><label>Your best friend(s):<input type="text" name="wronged_LostFriend"></label><br>
+						<label class='sheet-featurelabel'>What did it? With the Keeper's agreement, pick the monster breed.</label><br>
+						<label>My prey:<input type="text" name="wronged_LostPrey"></label><br>
+						<label class='sheet-featurelabel'>Why couldn't you save them? You were (pick one or more):</label><br>
+						<input type='checkbox' name='attr_Lost6' class='sheet-feature'><label>at fault</label><br>
+						<input type='checkbox' name='attr_Lost7' class='sheet-feature'><label>selfish</label><br>
+						<input type='checkbox' name='attr_Lost8' class='sheet-feature'><label>injured</label><br>
+						<input type='checkbox' name='attr_Lost9' class='sheet-feature'><label>weak</label><br>
+						<input type='checkbox' name='attr_Lost10' class='sheet-feature'><label>slow</label><br>
+						<input type='checkbox' name='attr_Lost11' class='sheet-feature'><label>scared</label><br>
+						<input type='checkbox' name='attr_Lost12' class='sheet-feature'><label>in denial</label><br>
+						<input type='checkbox' name='attr_Lost13' class='sheet-feature'><label>complicit</label><br>
+					</div>
+				</div>
+        	</div>
+        	<div class="sheet-box">
+				<!-- Playbook Selected -->
+				<label class="sheet-section-title">Playbook Gear:</label>
+				<input type="checkbox" name="attr_playbook" class="sheet-isChosen" value='Chosen' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isCrooked" value='Crooked' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isDivine" value='Divine' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isExpert" value='Expert' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isFlake" value='Flake' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isInitiate" value='Initiate' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isMonstrous" value='Monstrous' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isMundane" value='Mundane' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isProfessional" value='Professional' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isSpell-Slinger" value='Spell-Slinger' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isSpooky" value='Spooky' style="display: none;" />
+				<input type="checkbox" name="attr_playbook" class="sheet-isWronged" value='Wronged' style="display: none;" />
+				<!-- End Playbook Selected -->
+				<div class="sheet-Chosen">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapon</label>
+					<div>
+						<label class='sheet-featurelabel'>Form:</label><br>
+						<input type='radio' name='attr_WeaponForm' class='sheet-feature' value="Staff"><label>Staff (1 Harm, Hand/Close)</label><br>
+						<input type='radio' name='attr_WeaponForm' class='sheet-feature' value="Haft"><label>Haft (2 Harm, Hand, Heavy)</label><br>
+						<input type='radio' name='attr_WeaponForm' class='sheet-feature' value="Handle"><label>Handle (1 Harm, Hand, Balanced)</label><br>
+						<input type='radio' name='attr_WeaponForm' class='sheet-feature' value="Chain"><label>Chain (1 Harm, Hand, Area)</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Business End (Pick 3):</label><br>
+						<input type='checkbox' name='attr_Weapon1' class='sheet-feature'><Label>Artifact (+Magic)</label><br>
+						<input type='checkbox' name='attr_Weapon2' class='sheet-feature'><Label>Spikes (+1 Harm, Messy)</label><br>
+						<input type='checkbox' name='attr_Weapon3' class='sheet-feature'><Label>Blade (+1 Harm)</label><br>
+						<input type='checkbox' name='attr_Weapon4' class='sheet-feature'><Label>Heavy (+1 Harm)</label><br>
+						<input type='checkbox' name='attr_Weapon5' class='sheet-feature'><Label>Long (+Close)</label><br>
+						<input type='checkbox' name='attr_Weapon6' class='sheet-feature'><Label>Throwable (+Close)</label><br>
+						<input type='checkbox' name='attr_Weapon7' class='sheet-feature'><Label>Chain (+Area)</label><br>
+					</div>
+					<div>
+						<Label class='sheet-featurelabel'>Material:</label><br>
+						<input type="text" class="sheet-alwayson" name="attr_WeaponMat" class='sheet-feature'>
+					</div>
+				</div>
+				<div class="sheet-Crooked">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-featurelabel'>Effective Weapons (Pick 3):</label><br>
+						<input type='checkbox' name='attr_Weapon8' class='sheet-feature'><Label>.22 revolver (1-harm close reload small)</label><br>
+						<input type='checkbox' name='attr_Weapon9' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon10' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon11' class='sheet-feature'><Label>Shotgun (3-harm close messy)</label><br>
+						<input type='checkbox' name='attr_Weapon12' class='sheet-feature'><Label>Hunting rifle (2-harm far loud)</label><br>
+						<input type='checkbox' name='attr_Weapon13' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon14' class='sheet-feature'><Label>Baseball bat (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon15' class='sheet-feature'><Label>Submachinegun (2-harm close reload auto)</label><br>
+						<input type='checkbox' name='attr_Weapon16' class='sheet-feature'><Label>Assault rifle (3-harm close/far auto)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Divine">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapon</label>
+					<div>
+						<label class='sheet-featurelabel'>Pick one divine weapon:</label><br>
+						<input type='checkbox' name='attr_Weapon17' class='sheet-feature'><label>Flaming sword (3-harm hand fire holy)</label><br>
+						<input type='checkbox' name='attr_Weapon18' class='sheet-feature'><label>Thunder hammer (3-harm hand stun holy)</label><br>
+						<input type='checkbox' name='attr_Weapon19' class='sheet-feature'><label>Razor whip (3-harm hand area messy holy)</label><br>
+						<input type='checkbox' name='attr_Weapon20' class='sheet-feature'><label>Five demon bag (3-harm close magic holy)</label><br>
+						<input type='checkbox' name='attr_Weapon21' class='sheet-feature'><label>Silver trident (3-harm hand silver holy)</label><br>
+						<input type="checkbox" class="sheet-PBMoveEnabled sheet-feature" name="attr_ChosenmoveEnabled" checked disabled><Label>divine armour (1-armour holy)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Expert">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-featurelabel'>Monster-slaying Weapons (Pick 3):</label><br>
+						<input type='checkbox' name='attr_Weapon22' class='sheet-feature'><Label>Mallet & wooden stakes (3-harm intimate slow wooden)</label><br>
+						<input type='checkbox' name='attr_Weapon23' class='sheet-feature'><Label>Silver sword (2-harm hand messy silver)</label><br>
+						<input type='checkbox' name='attr_Weapon24' class='sheet-feature'><Label>Cold iron sword (2-harm hand messy iron)</label><br>
+						<input type='checkbox' name='attr_Weapon25' class='sheet-feature'><Label>Blessed knife (2-harm hand holy)</label><br>
+						<input type='checkbox' name='attr_Weapon26' class='sheet-feature'><Label>Magical dagger (2-harm hand magic)</label><br>
+						<input type='checkbox' name='attr_Weapon27' class='sheet-feature'><Label>Juju bag (1-harm far magic)</label><br>
+						<input type='checkbox' name='attr_Weapon28' class='sheet-feature'><Label>Flamethrower (3-harm close fire heavy volatile)</label><br>
+						<input type='checkbox' name='attr_Weapon29' class='sheet-feature'><Label>Magnum (3-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon30' class='sheet-feature'><Label> Shotgun (3-harm close messy loud)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Flake">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-featurelabel'>Normal Weapons (Pick 1):</label><br>
+						<input type='checkbox' name='attr_Weapon31' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon32' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon33' class='sheet-feature'><Label>Hunting rifle (2-harm far loud)</label><br>
+						<input type='checkbox' name='attr_Weapon34' class='sheet-feature'><Label>Magnum (3-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon35' class='sheet-feature'><Label>Shotgun (3-harm close messy loud)</label><br>
+						<input type='checkbox' name='attr_Weapon36' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Hidden Weapons (Pick 2):</label><br>
+						<input type='checkbox' name='attr_Weapon37' class='sheet-feature'><Label>Throwing knives (1-harm close many)</label><br>
+						<input type='checkbox' name='attr_Weapon38' class='sheet-feature'><Label>Holdout pistol (2-harm close loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon39' class='sheet-feature'><Label>Garrote (3-harm intimate)</label><br>
+						<input type='checkbox' name='attr_Weapon40' class='sheet-feature'><Label>Watchman's flashlight (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon41' class='sheet-feature'><Label>Weighted gloves/brass knuckles (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon42' class='sheet-feature'><Label>Butterfly knife/folding knife (1-harm hand)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Initiate">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-featurelabel'>Old Fashioned Weapons:</label><br>
+						<input type='checkbox' style="display: none;" class='sheet-feature' unchecked><Label>Pick Three if your sect has Fighting Arts or Obsolete Gear, otherwise, pick 2</Label><br>
+						<input type='checkbox' name='attr_Weapon43' class='sheet-feature'><Label>Sword (2-harm hand messy)</label><br>
+						<input type='checkbox' name='attr_Weapon44' class='sheet-feature'><Label>Axe (2-harm hand messy)</label><br>
+						<input type='checkbox' name='attr_Weapon45' class='sheet-feature'><Label>Big sword (3-harm hand messy heavy)</label><br>
+						<input type='checkbox' name='attr_Weapon46' class='sheet-feature'><Label>Big axe (3-harm hand messy slow heavy)</label><br>
+						<input type='checkbox' name='attr_Weapon47' class='sheet-feature'><Label>Silver knife (1-harm hand silver)</label><br>
+						<input type='checkbox' name='attr_Weapon48' class='sheet-feature'><Label>Fighting sticks (1-harm hand quick)</label><br>
+						<input type='checkbox' name='attr_Weapon49' class='sheet-feature'><Label>Spear (2-harm hand/close)</label><br>
+						<input type='checkbox' name='attr_Weapon50' class='sheet-feature'><Label>Mace (2-harm hand messy)</label><br>
+						<input type='checkbox' name='attr_Weapon51' class='sheet-feature'><Label>Crossbow (2-harm close slow)</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Moderns Weapons:</label><br>
+						<input type='checkbox' style="display: none;" class='sheet-feature' unchecked><Label>Pick Two if your sect has Modernized or Nifty Gadgets, none if you sect has Fighting Arts or Obsolete Gear otherwise, pick 1</Label><br>
+						<input type='checkbox' name='attr_Weapon52' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon53' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon54' class='sheet-feature'><Label>Sniper rifle (3-harm far)</label><br>
+						<input type='checkbox' name='attr_Weapon55' class='sheet-feature'><Label>Magnum (3-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon56' class='sheet-feature'><Label> Shotgun (3-harm close messy)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Monstrous">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Gear</label>
+					<div>
+						<label class='sheet-featurelabel'>If you want, you can take one handy weapon:</label><br>
+						<input type='checkbox' name='attr_Weapon57' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon58' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon59' class='sheet-feature'><Label>Magnum (3-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon60' class='sheet-feature'><Label>Shotgun (3-harm close messy)</label><br>
+						<input type='checkbox' name='attr_Weapon61' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon62' class='sheet-feature'><Label>Brass knuckles (1-harm hand quiet small)</label><br>
+						<input type='checkbox' name='attr_Weapon63' class='sheet-feature'><Label>Sword (2-harm hand messy)</label><br>
+						<input type='checkbox' name='attr_Weapon64' class='sheet-feature'><Label>Huge sword (3-harm hand heavy)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Mundane">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Gear</label>
+					<div>
+						<label class='sheet-featurelabel'>You get two Mundane weapons and a means of transport.</label><br>
+						<label class='sheet-featurelabel'>Mundane weapons (pick two):</label><br>
+						<input type='checkbox' name='attr_Weapon65' class='sheet-feature'><Label>Golf club, baseball bat, cricket bat, or hockey stick (2-harm hand innocuous messy)</label><br>
+						<input type='checkbox' name='attr_Weapon66' class='sheet-feature'><Label>Pocket knife or multitool (1-harm hand useful small)</label><br>
+						<input type='checkbox' name='attr_Weapon67' class='sheet-feature'><Label>Small handgun (2-harm close loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon68' class='sheet-feature'><Label>Hunting rifle (3-harm far loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon69' class='sheet-feature'><Label>Sledge-hammer or fire axe (3-harm hand messy)</label><br>
+						<input type='checkbox' name='attr_Weapon70' class='sheet-feature'><Label>Nunchuks (2-harm hand area)</label><br>
+						<label class='sheet-featurelabel'>Means of transport (pick one):</label><br>
+						<input type='checkbox' name='attr_Weapon71' class='sheet-feature'><Label>Skateboard</label><br>
+						<input type='checkbox' name='attr_Weapon72' class='sheet-feature'><Label>Bicycle</label><br>
+						<input type='checkbox' name='attr_Weapon73' class='sheet-feature'><Label>Fairly new car in decent condition</label><br>
+						<input type='checkbox' name='attr_Weapon74' class='sheet-feature'><Label>Classic car in terrible condition</label><br>
+						<input type='checkbox' name='attr_Weapon75' class='sheet-feature'><Label>Motorcycle</label><br>
+						<input type='checkbox' name='attr_Weapon76' class='sheet-feature'><Label>Van</label><br>
+					</div>
+				</div>
+				<div class="sheet-Professional">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-featurelabel'>Armor (pick one):</label><br>
+						<input type='checkbox' name='attr_Weapon77' class='sheet-feature'><Label>Flak vest (1-armour hidden)</label><br>
+						<input type='checkbox' name='attr_Weapon78' class='sheet-feature'><Label>Combat armour (2-armour heavy)</label><br>
+						<label class='sheet-featurelabel'>Serious weapons (pick one):</label><br>
+						<input type='checkbox' name='attr_Weapon79' class='sheet-feature'><Label>Assault rifle (3-harm far area loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon80' class='sheet-feature'><Label>Grenade launcher (4-harm far area messy loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon81' class='sheet-feature'><Label>Sniper rifle (4-harm far)</label><br>
+						<input type='checkbox' name='attr_Weapon82' class='sheet-feature'><Label>Grenades (4-harm close area messy loud)</label><br>
+						<input type='checkbox' name='attr_Weapon83' class='sheet-feature'><Label>Submachine gun (3-harm close area loud reload)</label><br>
+						<label class='sheet-featurelabel'>Normal weapons (pick two):</label><br>
+						<input type='checkbox' name='attr_Weapon84' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon85' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon86' class='sheet-feature'><Label>Hunting rifle (2-harm far loud)</label><br>
+						<input type='checkbox' name='attr_Weapon87' class='sheet-feature'><Label>Shotgun (3-harm close messy)</label><br>
+						<input type='checkbox' name='attr_Weapon88' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Spell-Slinger">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<label class='sheet-sheet-feature'>You don't need much—aside from any foci or consumables to power your magic. Still, it's good to carry some backup</label><br>
+						<label class='sheet-featurelabel'>Pick one:</label><br>
+						<input type='checkbox' name='attr_Weapon89' class='sheet-feature'><Label>Old revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon90' class='sheet-feature'><Label>Ritual knife (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon91' class='sheet-feature'><Label>Heirloom sword (2-harm hand messy)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Spooky">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<input type='checkbox' name='attr_Weapon92' class='sheet-feature' checked disabled><Label>You get any magical items or amulets that you use to invoke your powers. <input type="text" name="attr_Weapon32"></label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Normal Weapons (Pick 2):</label><br>
+						<input type='checkbox' name='attr_Weapon93' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon94' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon95' class='sheet-feature'><Label>Hunting rifle (2-harm far loud)</label><br>
+						<input type='checkbox' name='attr_Weapon96' class='sheet-feature'><Label>Shotgun (3-harm close messy loud)</label><br>
+						<input type='checkbox' name='attr_Weapon97' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+					</div>
+				</div>
+				<div class="sheet-Wronged">
+					<input type='checkbox' name='attr_lock_weapon' class='sheet-featurelock'><label>Choose Weapons</label>
+					<div>
+						<input type='checkbox' name='attr_Weapon98' class='sheet-feature' checked disabled><Label>You have protective wear, suited to your look, worth
+1-armour.</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Vehicle (If you want, you may take one of):</label><br>
+						<input type='checkbox' name='attr_Weapon99' class='sheet-feature'><Label>classic car</label><br>
+						<input type='checkbox' name='attr_Weapon100' class='sheet-feature'><Label>classic motorcycle,</label><br>
+						<input type='checkbox' name='attr_Weapon101' class='sheet-feature'><Label>plain pickup</label><br>
+						<input type='checkbox' name='attr_Weapon102' class='sheet-feature'><Label>plain van</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Signature Weapons (Pick 1):</label><br>
+						<input type='checkbox' name='attr_Weapon103' class='sheet-feature'><Label>Sawn-off shotgun (3-harm hand/close messy loud reload)</label><br>
+						<input type='checkbox' name='attr_Weapon104' class='sheet-feature'><Label>Hand cannon (3-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon105' class='sheet-feature'><Label>Fighting knife (2-harm hand quiet)</label><br>
+						<input type='checkbox' name='attr_Weapon106' class='sheet-feature'><Label>Huge sword or huge axe (3-harm hand messy heavy)</label><br>
+						<input type='checkbox' name='attr_Weapon107' class='sheet-feature'><Label>Specialist weapons for destroying your foes (e.g.
+wooden stakes and mallet for vampires, silver dagger for werewolves, etc.). 4-harm against the specific creatures it targets, 1-harm otherwise, and other tags by agreement with the Keeper.<input type="text" name="wronged_SpecialistWeapon"/></label><br>
+						<input type='checkbox' name='attr_Weapon108' class='sheet-feature'><Label>Enchanted dagger (2-harm hand magic)</label><br>
+						<input type='checkbox' name='attr_Weapon109' class='sheet-feature'><Label>Chainsaw (3-harm hand messy unreliable loud
+heavy)</label><br>
+					</div>
+					<div>
+						<label class='sheet-featurelabel'>Practical Weapons (Pick 2):</label><br>
+						<input type='checkbox' name='attr_Weapon110' class='sheet-feature'><Label>.38 revolver (2-harm close reload loud)</label><br>
+						<input type='checkbox' name='attr_Weapon111' class='sheet-feature'><Label>9mm (2-harm close loud)</label><br>
+						<input type='checkbox' name='attr_Weapon112' class='sheet-feature'><Label>Hunting rifle (2-harm far loud)</label><br>
+						<input type='checkbox' name='attr_Weapon113' class='sheet-feature'><Label>Shotgun (3-harm close messy loud)</label><br>
+						<input type='checkbox' name='attr_Weapon114' class='sheet-feature'><Label>Big knife (1-harm hand)</label><br>
+						<input type='checkbox' name='attr_Weapon115' class='sheet-feature'><Label>Brass knuckles (1-harm hand stealthy)</label><br>
+						<input type='checkbox' name='attr_Weapon116' class='sheet-feature'><Label>Assault rifle (3-harm close area loud reload)</label><br>
+					</div>
+				</div>
+			</div>
+		<label class="sheet-section-title">Other Gear:</label>
+		<fieldset class="repeating_gear">            
+ 			     <label class="sheet-desc">Item:</label>
+  			      <textarea rows="4" cols="50" name="attr_gearitem" ></textarea>
+		</fieldset>	
+	</div>
+</div>
+
+</div>
+
+<!-- ROLL TEMPLATES -->
+<rolltemplate class="sheet-rolltemplate-MotW">
+    <table>
+        <tr><th colspan="2">{{name}} rolls{{#roll_name}} {{roll_name}}{{/roll_name}}{{#roll_mod}}({{roll_mod}}){{/roll_mod}}</th></tr>
+        <tr>
+            {{#rollTotal() result 15}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 15}}
+            {{#rollTotal() result 14}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 14}}
+            {{#rollTotal() result 13}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 13}}
+            {{#rollTotal() result 12}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 12}}
+            {{#rollTotal() result 11}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 11}}
+            {{#rollTotal() result 10}}
+	            <td class="result success">{{result}}</td>
+	            <td> Succeeds </td>
+            {{/rollTotal() result 10}}
+            {{#rollTotal() result 9}}
+	            <td class="result">{{result}}</td>
+	            <td>Succeeds partially</td>
+            {{/rollTotal() result 9}}
+            {{#rollTotal() result 8}}
+	            <td class="result">{{result}}</td>
+	            <td>Succeeds partially</td>
+            {{/rollTotal() result 8}}
+            {{#rollTotal() result 7}}
+	            <td class="result">{{result}}</td>
+	            <td>Succeeds partially</td>
+            {{/rollTotal() result 7}}
+            {{#rollTotal() result 6}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 6}}
+            {{#rollTotal() result 5}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 5}}
+            {{#rollTotal() result 4}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 4}}
+            {{#rollTotal() result 3}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 3}}
+            {{#rollTotal() result 2}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 2}}
+            {{#rollTotal() result 1}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 1}}
+            {{#rollTotal() result 0}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result 0}}
+            {{#rollTotal() result -1}}
+            	<td class="result failure">{{result}}</td>
+            	<td>Misses</td>
+            {{/rollTotal() result -1}}
+        </tr>
+    </table>
+</rolltemplate>

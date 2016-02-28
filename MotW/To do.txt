@@ -1,0 +1,39 @@
+Things we need:
+----Unstable checkbox
+----Luck
+XXXXX Change Harm/Luck/Advances to magic checkboxes
+	XXXXXAlso, need to be able to zero it out
+----Add up/down arrows to stat boxes
+----Change playbook moves to be included automatically
+	----Playbook moves also need to auto-hide when chosing other playbooks
+----Remove Checkbox from playbook
+--Chosen fate stuff - Possibly include a checkbox to hide unchosen options
+	"Questions" need visual differentiation
+	----Checkboxes and labels MUST be on the same row
+----Hide roll buttons on unchosen moves
+----GEAR
+
+----Add advancements for other playbooks
+----Add playbook moves for other playbooks
+----How to handle the Crooked's "Pick one, but also fill in a space" "Heat" section.
+----Crooked's 'Background' needs to be handled as part of the move list
+XXXX"Fancy" checkboxes for Fate stuff?
+----Add Professional Agency Checkboxes
+----Hide Professional Agency "Choose text"
+----Hide Unchosen Vehicle options on Professional
+----Remove "class="sheet-PBMoveEnabled" from Professional Vehicle? Should be unnecessary?
+----Crooked's un-chosen Background items don't hide due to formatting - Not sure there is a clean way to fix this either, without moving the radio button outside the label. Can probably fix this with CHECKBOXES using a hidden checkbox, but that won't work with radio button.
+
+
+Hide "instructions" for other playbook features (See: The Initiate's Sect and Weapons sections)
+Add "Has roll" checkbox to Other Moves?
+Hide non-chosen artifacts -- Same problem as the Crooked's Background in general? Just don't really want to add ANOTHER choose checkbox. 
+***** Line wrapping on checkboxes/radio buttons 
+
+Do we like the line breaks in move descriptions? Is there a more clear way to handle that?
+Add a "look" field at the top?
+If "I've Read About This Sort of Thing" is checked, move "Act Under Pressure" to Sharp?  If so, remove button on the move itself  -- I don't think this will work; These elements are too disconnected.
+Add line wrap to move names? - Would require switching to 'Textarea' field, probably;  May not be worth the effort, people can just pop out the character sheet and view it fullscreen?
+Add advancement improvements to attribute ratings automatically - Probably can't be done; Improvements are checkboxes, and we can't change their value on the fly.
+Make it pretty
+History Text box?

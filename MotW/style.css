@@ -1,0 +1,372 @@
+/*
+[Imgur](http://i.imgur.com/OjBPJL9.jpg)
+[Imgur](http://i.imgur.com/RNob7Yh.jpg)
+*/
+
+@font-face {
+font-family: 'Special Elite';
+font-style: normal;
+font-weight: 400;
+src: local('Special Elite'), local('SpecialElite-Regular'), url(http://fonts.gstatic.com/s/specialelite/v5/9-wW4zu3WNoD5Fjka35Jm4kzzdU71mzyRvKBGWbyScU.woff) format('woff');
+} 
+
+
+li {
+list-style: none;
+}
+
+li.sheet-squares {
+	list-style-type: square;
+}
+
+.charsheet .sheet-maindiv label {
+    display: inline-block;
+    width: auto;
+	margin-left: 5px;
+	font-family: 'Special Elite', 'Helvetica', sans-serif;
+	font-weight: normal;
+}
+.charsheet .sheet-maindiv .sheet-col label {
+	display: inline-block;
+	width: auto;
+}
+.charsheet .sheet-maindiv .sheet-col label.sheet-harm {
+	padding-right: 10;
+}
+.charsheet .sheet-maindiv label.sheet-name {
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+.charsheet .sheet-maindiv .sheet-col .sheet-section-title {
+	background: url('http://i.imgur.com/OjBPJL9.jpg') repeat-x left center transparent;
+	color: #FFFFFF;
+	line-height: 43px;
+	height: 36px;
+	width: 100%;
+	padding-left: 15px;
+	margin-left: 0;
+	margin-bottom: 0;
+	font-size: 1.5em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.charsheet .sheet-maindiv .sheet-col.sheet-even .sheet-section-title {
+	background: url('http://i.imgur.com/RNob7Yh.jpg') repeat-x left center transparent;
+}
+
+.charsheet .sheet-maindiv .sheet-col .sheet-harm.sheet-section-title,
+.charsheet .sheet-maindiv .sheet-col .sheet-other.sheet-section-title,
+.charsheet .sheet-maindiv .sheet-col .sheet-improvements.sheet-section-title {
+	margin-bottom: 10px;
+}
+
+.charsheet label.sheet-improvement {
+	font-size: 1em;
+}
+
+.charsheet label.sheet-lock {
+	width: auto;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.charsheet .sheet-attr-box {
+	padding: 5px;
+}
+.charsheet .sheet-attr-box input[type=text] {
+	width: 35px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.charsheet .sheet-attr-box input[type=checkbox] {
+	width: auto;
+}
+
+label.sheet-cool.sheet-attr {
+	width: auto;
+	display: inline-block;
+	float: left;
+	line-height: 32px;
+}
+
+input.sheet-attr {
+	display: inline-block;
+	width: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.ui-dialog .charsheet button[type=roll] {
+	display: inline;
+	float: right;
+}
+
+button[type=roll] {
+	display: inline;
+	float: right;
+}
+
+.sheet-move-box {
+	
+}
+.charsheet div.sheet-roll-box {
+	padding: 8px 4px;
+	background: #EFEFEF;
+	margin-top: 0;
+	line-height: 16px;
+}
+.sheet-highlight {
+	font-size: 0.85em;
+}
+.repcontainer div.repitem {
+	padding: 5px;
+	background: #EFEFEF;
+	margin-bottom: 9px;
+}
+.repcontainer div.repitem {
+
+}
+div.repitem .sheet-movename, div.repitem .sheet-stat {
+	width: 20%;
+	box-sizing: border-box;
+}
+input.sheet-pbmovename {
+	outline-width:0;
+	border: 0px solid;
+	box-sizing: border-box;
+	background-color : #FFFFFF;
+	font-weight: bold;
+	width: 75%;
+}
+
+input.sheet-PBMoveEnabled:not(:checked) ~ button {
+    display: none;
+}
+
+input.sheet-PBMoveEnabled:not(:checked) ~ label,
+input.sheet-PBMoveEnabled:not(:checked) ~ div .sheet-feature,
+input.sheet-PBMoveEnabled:not(:checked) ~ div .sheet-playbook_move_text
+{
+    color: #A0A0A0;
+}
+
+div.repitem input[type=text]{
+	width: 75%;
+}
+.repcontrol {
+	margin-bottom: 15px;
+}
+.repcontainer div.repitem select {
+	width: 75%;
+	margin: 0;
+}
+div.repitem .sheet-desc {
+	width: auto;
+}
+input[name="attr_movedesc"]{
+	width: auto;
+}
+.repitem textarea,
+.sheet-box textarea {
+	height: 32px;
+	box-sizing: border-box;
+}
+
+.largedialog textarea {
+	height: 80px;
+}
+
+.sheet-roll-box label.sheet-buttonLbl {
+	max-width: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+.align-right {
+	float:right;
+}
+
+.sheet-Chosen, 
+.sheet-Crooked,
+.sheet-Divine, 
+.sheet-Expert, 
+.sheet-Flake, 
+.sheet-Initiate, 
+.sheet-Monstrous, 
+.sheet-Mundane, 
+.sheet-Professional, 
+.sheet-Spell-Slinger, 
+.sheet-Spooky,
+.sheet-Wronged {
+	display: none;
+}
+
+.sheet-playbookSelected {
+	display: none;
+}
+
+.sheet-lock:checked ~ .sheet-playbook,
+.sheet-lock:checked ~ .sheet-playbook + label {
+	display: none;
+}
+.sheet-lock:checked ~ .sheet-playbook:checked,
+.sheet-lock:checked ~ .sheet-playbook:checked + label,
+.sheet-lock:checked ~ .sheet-playbookSelected {
+	display: inline-block;
+}
+
+.sheet-lock:not(:checked) ~ .sheet-playbook,
+.sheet-lock:not(:checked) ~ .sheet-playbook + label {
+	display: inline-block;
+}
+
+.sheet-lock:checked ~ .sheet-playbookcol {
+	display: none;
+}
+
+.sheet-movestat[value="None"]  + .button {
+	display: none;
+}
+
+.sheet-playbookcol > .sheet-playbook:checked,
+.sheet-playbookcol > .sheet-playbook:checked + label {
+	display: inline-block;
+}
+
+input.sheet-showhide:checked ~ .sheet-subbox {display: none;}
+
+.sheet-isChosen:checked ~ .sheet-Chosen,
+.sheet-isCrooked:checked ~ .sheet-Crooked,
+.sheet-isDivine:checked ~ .sheet-Divine,
+.sheet-isExpert:checked ~ .sheet-Expert,
+.sheet-isFlake:checked ~ .sheet-Flake,
+.sheet-isInitiate:checked ~ .sheet-Initiate,
+.sheet-isMonstrous:checked ~ .sheet-Monstrous,
+.sheet-isMundane:checked ~ .sheet-Mundane,
+.sheet-isProfessional:checked ~ .sheet-Professional,
+.sheet-isSpell-Slinger:checked ~ .sheet-Spell-Slinger,
+.sheet-isSpooky:checked ~ .sheet-Spooky,
+.sheet-isWronged:checked ~ .sheet-Wronged {
+	display: block;
+}
+
+input.sheet-featurelock:checked ~ div .sheet-feature:not(:checked),
+input.sheet-featurelock:checked ~ div .sheet-feature:checked,
+input.sheet-featurelock:checked ~ div .sheet-feature:not(:checked) + label,
+input.sheet-featurelock:checked ~ div .sheet-feature:not(:checked) + label + br
+{
+    display: none;
+}
+
+input.sheet-featurelock:checked ~ div .sheet-feature:checked + label
+{
+    display:inline-block;
+	text-indent: 25px;
+}
+
+input.sheet-feature {float:left;}
+
+.sheet-featurelabel 
+{
+	font-weight: 800;
+	text-decoration: underline;
+}
+
+.sheet-alwayson
+{
+	display:inline-block;
+}
+
+input.sheet-inlinetext
+{
+    width: 100px;
+}
+
+/**
+* http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.sheet-cf:before,
+.sheet-cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.sheet-cf:after {
+    clear: both;
+}
+
+/* ROLL TEMPLATE */
+
+.sheet-rolltemplate-MotW table {
+    width: 189px;
+    height: 189px;
+    padding: 2px;
+    background: url(http://i.imgur.com/xBk4U1p.jpg) top left;
+    background-size: 189px 189px;
+    background-repeat: no-repeat;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-spacing: 0;
+}
+ 
+.sheet-rolltemplate-MotW th {
+    color: rgb(0, 0, 0);
+    padding: 15px 2px 2px 20px;
+	line-height: 1.2em;
+	font-size: 1.2em;
+    text-align: left;
+}
+ 
+ 
+.sheet-rolltemplate-MotW td {
+    padding-left: 20px;
+    font-size: 1.0em;
+    vertical-align: top;
+}
+ 
+.sheet-rolltemplate-MotW .sheet-result {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+ 
+.sheet-rolltemplate-MotW .inlinerollresult,
+.sheet-rolltemplate-MotW .inlinerollresult.fullcrit,
+.sheet-rolltemplate-MotW .inlinerollresult.fullfail,
+.sheet-rolltemplate-MotW .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.sheet-rolltemplate-MotW .sheet-success .inlinerollresult,
+.sheet-rolltemplate-MotW .sheet-success .inlinerollresult.fullcrit,
+.sheet-rolltemplate-MotW .sheet-success .inlinerollresult.fullfail,
+.sheet-rolltemplate-MotW .sheet-success .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #3FB315;
+    border: none;
+}
+
+.sheet-rolltemplate-MotW .sheet-failure .inlinerollresult,
+.sheet-rolltemplate-MotW .sheet-failure .inlinerollresult.fullcrit,
+.sheet-rolltemplate-MotW .sheet-failure .inlinerollresult.fullfail,
+.sheet-rolltemplate-MotW .sheet-failure .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #B31515;
+    border: none;
+}
+
+.sheet-action-row {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
