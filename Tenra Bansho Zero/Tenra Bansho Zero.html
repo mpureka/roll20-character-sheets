@@ -1,3 +1,26 @@
+<script type="text/worker">
+    on("change:fate_1 change:fate_2 change:fate_3 change:fate_4 change:fate_5 change:fate_6 change:fate_7 change:fate_8", function(eventInfo) {
+        getAttrs([eventInfo.sourceAttribute],function(values){
+            var sourceFate = eventInfo.sourceAttribute;
+        	var sourceFateValue = values[eventInfo.sourceAttribute];
+            var sourceFateLevel = sourceFate.concat("_level");
+            switch( parseInt(sourceFateValue,10) ) {
+                case 0:
+                    setAttrs({[sourceFateLevel]:2});
+                    break;
+                case 10:
+                    setAttrs({[sourceFateLevel]:3});
+                    break;
+                case 30:
+                    setAttrs({[sourceFateLevel]:4});
+                    break;
+                case 70:
+                    setAttrs({[sourceFateLevel]:5});
+                    break;
+            };
+        });
+    });
+</script>
 <div class="sheet-container-fluid">
     <div class="row">
         <label class="sheet-col-md-1 sheet-label-cell black">Name</label>
@@ -76,7 +99,7 @@
                     <input disabled name="attr_vitality_max" class="sheet-static" type="number" value="@{body_1}+@{spirit}+@{vitality_extra}"/>
                 </div>
                 <div class="sheet-col-md-4">
-                    <input name="attr_vitality_extra" class="sheet-input-number" type="number"/>
+                    <input name="attr_vitality_extra" class="sheet-input-number" type="number" value="0"/>
                 </div>
             </div>
         </div>
@@ -97,7 +120,7 @@
                     <input disabled name="attr_soul_max" class="sheet-static" type="number" value="@{soul_extra}+(@{knowledge}+@{spirit})*2"/>
                 </div>
                 <div class="sheet-col-md-4">
-                    <input name="attr_soul_extra" class="sheet-input-number" type="number"/>
+                    <input name="attr_soul_extra" class="sheet-input-number" type="number" value="0"/>
                 </div>
             </div>
         </div>
@@ -121,7 +144,7 @@
             <div class="row">
                 <label class="col-md-6 label-cell-small">Meikyo</label>
                 <div class="col-md-6">
-                    <input name="attr_karma_meikyo" class="input-number" type="number"/>
+                    <input name="attr_karma_meikyo" class="input-number" type="number" value="0"/>
                 </div>
             </div>
             <div class="row">
@@ -139,22 +162,28 @@
                 <label class="col-md-12 label-cell">Fates</label>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input class="input" name="attr_fate_1_text" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_1_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_1_level}}} {{result=[[@{empathy}d6<@{fate_1_level}cf<0cs>7]]}}' name="roll_fate1"></button>
+                </div>
                 <div class="col-md-1">
-                    <select class="select" name="attr_fate_1">                
+                    <select class="select" name="attr_fate_1">               
                         <option value="0" >2</option>
                         <option value="10" >3</option>
                         <option value="30" >4</option>
                         <option value="70" >5</option>
                     </select>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input name="attr_fate_5_text" class="input" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_5_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_5_level}}} {{result=[[@{empathy}d6<@{fate_5_level}cf<0cs>7]]}}' name="roll_fate5"></button>
+                </div>
                 <div class="col-md-1">
-                    <select name="attr_fate_5" class="select">                
+                    <select name="attr_fate_5" class="select">               
                         <option value="0">2</option>
                         <option value="10">3</option>
                         <option value="30">4</option>
@@ -163,22 +192,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input class="input" name="attr_fate_2_text" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_2_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_2_level}}} {{result=[[@{empathy}d6<@{fate_2_level}cf<0cs>7]]}}' name="roll_fate2"></button>
+                </div>
                 <div class="col-md-1">
-                    <select class="select" name="attr_fate_2">                
+                    <select class="select" name="attr_fate_2">               
                         <option value="0" >2</option>
                         <option value="10" >3</option>
                         <option value="30" >4</option>
                         <option value="70" >5</option>
                     </select>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input name="attr_fate_6_text" class="input" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_6_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_6_level}}} {{result=[[@{empathy}d6<@{fate_6_level}cf<0cs>7]]}}' name="roll_fate6"></button>
+                </div>
                 <div class="col-md-1">
-                    <select name="attr_fate_6" class="select">                
+                    <select name="attr_fate_6" class="select">               
                         <option value="0">2</option>
                         <option value="10">3</option>
                         <option value="30">4</option>
@@ -187,22 +222,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input class="input" name="attr_fate_3_text" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_3_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_3_level}}} {{result=[[@{empathy}d6<@{fate_3_level}cf<0cs>7]]}}' name="roll_fate3"></button>
+                </div>
                 <div class="col-md-1">
-                    <select class="select" name="attr_fate_3">                
+                    <select class="select" name="attr_fate_3">               
                         <option value="0" >2</option>
                         <option value="10" >3</option>
                         <option value="30" >4</option>
                         <option value="70" >5</option>
                     </select>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input name="attr_fate_7_text" class="input" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_7_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_7_level}}} {{result=[[@{empathy}d6<@{fate_7_level}cf<0cs>7]]}}' name="roll_fate7"></button>
+                </div>
                 <div class="col-md-1">
-                    <select name="attr_fate_7" class="select">                
+                    <select name="attr_fate_7" class="select">               
                         <option value="0">2</option>
                         <option value="10">3</option>
                         <option value="30">4</option>
@@ -211,22 +252,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input class="input" name="attr_fate_4_text" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_4_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_4_level}}} {{result=[[@{empathy}d6<@{fate_4_level}cf<0cs>7]]}}' name="roll_fate4"></button>
+                </div>
                 <div class="col-md-1">
-                    <select class="select" name="attr_fate_4">                
+                    <select class="select" name="attr_fate_4">               
                         <option value="0" >2</option>
                         <option value="10" >3</option>
                         <option value="30" >4</option>
                         <option value="70" >5</option>
                     </select>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4half">
                     <input name="attr_fate_8_text" class="input" type="text"/>
                 </div>
+                <div class="col-md-half">
+                    <button type="roll" class="roll-button" value='&{template:fate} {{name=@{character_name}}} {{fate=@{fate_8_text}}} {{empathy=@{empathy}}} {{faterank=@{fate_8_level}}} {{result=[[@{empathy}d6<@{fate_8_level}]]}}' name="roll_fate8"></button>
+                </div>
                 <div class="col-md-1">
-                    <select name="attr_fate_8" class="select">                
+                    <select name="attr_fate_8" class="select">               
                         <option value="0">2</option>
                         <option value="10">3</option>
                         <option value="30">4</option>
@@ -258,7 +305,7 @@
                     Unarmed
                 </div>
                 <div class="col-md-3">
-                    <select name="attr_unarmed_combat" class="select">                
+                    <select name="attr_unarmed_combat" class="select">               
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -272,7 +319,7 @@
                     Wormcharm
                 </div>
                 <div class="col-md-3">
-                <select name="attr_wormcharm" class="select">                
+                <select name="attr_wormcharm" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -294,7 +341,7 @@
                     Movement
                 </div>
                 <div class="col-md-3">
-                <select name="attr_movement" class="select">                
+                <select name="attr_movement" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -308,7 +355,7 @@
                     Stealth
                 </div>
                 <div class="col-md-3">
-                <select name="attr_stealth" class="select">                
+                <select name="attr_stealth" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -322,7 +369,7 @@
                     Evasion
                 </div>
                 <div class="col-md-3">
-                <select name="attr_evasion" class="select">                
+                <select name="attr_evasion" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -336,7 +383,7 @@
                     Melee Weapons
                 </div>
                 <div class="col-md-3">
-                <select name="attr_melee_weapons" class="select">                
+                <select name="attr_melee_weapons" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -350,7 +397,7 @@
                     Ninjutsu
                 </div>
                 <div class="col-md-3">
-                <select name="attr_ninjutsu" class="select">                
+                <select name="attr_ninjutsu" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -365,7 +412,7 @@
                     Criminal Arts
                 </div>
                 <div class="col-md-3">
-                <select name="attr_criminal_arts" class="select">                
+                <select name="attr_criminal_arts" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -389,7 +436,7 @@
                     First Aid
                 </div>
                 <div class="col-md-3">
-                <select name="attr_first_aid" class="select">                
+                <select name="attr_first_aid" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -403,7 +450,7 @@
                     Notice
                 </div>
                 <div class="col-md-3">
-                <select name="attr_notice" class="select">                
+                <select name="attr_notice" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -417,7 +464,7 @@
                     Marksman
                 </div>
                 <div class="col-md-3">
-                <select name="attr_marksman" class="select">                
+                <select name="attr_marksman" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -431,7 +478,7 @@
                     Pursuit/Hunt
                 </div>
                 <div class="col-md-3">
-                <select name="attr_pursuit" class="select">                
+                <select name="attr_pursuit" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -445,7 +492,7 @@
                     Forgery
                 </div>
                 <div class="col-md-3">
-                <select name="attr_forgery" class="select">                
+                <select name="attr_forgery" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -466,7 +513,7 @@
                     Information
                 </div>
                 <div class="col-md-3">
-                <select name="attr_information" class="select">                
+                <select name="attr_information" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -480,7 +527,7 @@
                     Onmy&#333;jutsu
                 </div>
                 <div class="col-md-3">
-                <select name="attr_onmyojutsu" class="select">                
+                <select name="attr_onmyojutsu" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -503,7 +550,7 @@
                     Willpower
                 </div>
                 <div class="col-md-3">
-                <select name="attr_willpower" class="select">                
+                <select name="attr_willpower" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -517,7 +564,7 @@
                     Resonance
                 </div>
                 <div class="col-md-3">
-                <select name="attr_resonance" class="select">                
+                <select name="attr_resonance" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -532,7 +579,7 @@
                     Interface
                 </div>
                 <div class="col-md-3">
-                <select name="attr_interface" class="select">                
+                <select name="attr_interface" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -547,7 +594,7 @@
                     Buddhist Magic
                 </div>
                 <div class="col-md-3">
-                <select name="attr_buddhist_magic" class="select">                
+                <select name="attr_buddhist_magic" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -568,7 +615,7 @@
                     Pillow Arts
                 </div>
                 <div class="col-md-3">
-                <select name="attr_pillow_arts" class="select">                
+                <select name="attr_pillow_arts" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -582,7 +629,7 @@
                     Persuasion
                 </div>
                 <div class="col-md-3">
-                <select name="attr_persuasion" class="select">                
+                <select name="attr_persuasion" class="select">               
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -596,7 +643,7 @@
                     Perform
                 </div>
                 <div class="col-md-3">
-                <select name="attr_perform" class="select">                
+                <select name="attr_perform" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -619,7 +666,7 @@
                     Strategy
                 </div>
                 <div class="col-md-3">
-                <select name="attr_strategy" class="select">                
+                <select name="attr_strategy" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -634,7 +681,7 @@
                     Etiquette
                 </div>
                 <div class="col-md-3">
-                 <select name="attr_etiquette" class="select">                
+                 <select name="attr_etiquette" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -649,7 +696,7 @@
                     Shinto
                 </div>
                 <div class="col-md-3">
-                 <select name="attr_shinto" class="select">                
+                 <select name="attr_shinto" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -664,7 +711,7 @@
                     Art of Rule
                 </div>
                 <div class="col-md-3">
-                 <select name="attr_aor" class="select">                
+                 <select name="attr_aor" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -684,7 +731,7 @@
                     <input name="attr_aow_name_1" class="input" type="text"/>
                 </div>
                 <div class="col-md-3">
-                 <select name="attr_aow_1" class="select">                
+                 <select name="attr_aow_1" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -699,7 +746,7 @@
                     <input name="attr_aow_name_2" class="input" type="text"/>
                 </div>
                 <div class="col-md-3">
-                 <select name="attr_aow_2" class="select">                
+                 <select name="attr_aow_2" class="select">               
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -715,11 +762,11 @@
             <div class="row">
                 <label class="col-md-4 label-cell green">Roll</label>
                 <div class="col-md-2">
-                    <button type="roll" class="roll-button" value="/roll [[?{dice|1}]]d6<?{Skill|1}" name="roll_test"></button>
+                    <button type="roll" class="roll-button" value="/roll [[?{dice|1}]]d6<?{Skill|1}cf<0cs>7" name="roll_test"></button>
                 </div>
                 <label class="col-md-4 label-cell green">GM</label>
                 <div class="col-md-2">
-                    <button type="roll" class="roll-button" value="/gr [[?{dice|1}]]d6<?{Skill|1}" name="roll_test"></button>
+                    <button type="roll" class="roll-button" value="/gr [[?{dice|1}]]d6<?{Skill|1}cf<0cs>7" name="roll_test"></button>
                 </div>
             </div>
         </div>
@@ -871,3 +918,10 @@
         <textarea name="attr_possessions" class="textarea-notes" rows="10"></textarea>
     </div>
 </div>
+<rolltemplate class="sheet-rolltemplate-fate">
+    <table>
+		<tr><th>{{name}} makes a Fate roll for {{fate}} </th></tr>
+		<tr><td><span class="tcat">(Empathy {{empathy}}, Fate Rank {{faterank}})</td></tr>
+		<tr><td class="result">{{result}} Kiai</td></tr>
+    </table>
+</rolltemplate>

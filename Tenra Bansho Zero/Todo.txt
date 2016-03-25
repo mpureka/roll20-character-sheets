@@ -1,0 +1,4 @@
+Todo: 
+Try to clean up roll autoformatting?
+Add roll template to other fate roll buttons
+Try to reduce wasted whitespace around fate roll button

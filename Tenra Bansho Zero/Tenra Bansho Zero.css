@@ -6,6 +6,10 @@ button[type=roll].sheet-roll-button {
     padding: 0px 4px 0px 4px;
 }
 
+.sheet-hidden {
+    display: none;
+}
+
 .sheet-textarea {
     font-size: 8pt;
     width: 100%;
@@ -36,7 +40,7 @@ button[type=roll].sheet-roll-button {
 
 .sheet-input {
     font-size: 8pt;
-    text-align: center;
+    text-align: left;
     display block;
     width: 100%;
     border-radius: 0px;
@@ -156,7 +160,7 @@ body {
 }
 
 .sheet-col-md-1, .sheet-col-md-2, .sheet-col-md-3, .sheet-col-md-4, .sheet-col-md-5, .sheet-col-md-6, .sheet-col-md-7, .sheet-col-md-8, .sheet-col-md-9,
-.sheet-col-md-10, .sheet-col-md-11, .sheet-col-md-12 {
+.sheet-col-md-10, .sheet-col-md-11, .sheet-col-md-12, .sheet-col-md-half, .sheet-col-md-4half {
     position: relative;
     min-height: 1px;
     padding-right: 1px;
@@ -197,6 +201,10 @@ body {
     width: 41.66666667%;
 }
 
+.sheet-col-md-4half {
+    width: 37.49999998%;
+}
+
 .sheet-col-md-4 {
     width: 33.33333333%;
 }
@@ -211,6 +219,10 @@ body {
 
 .sheet-col-md-1 {
     width: 8.33333333%;
+}
+
+.sheet-col-md-half {
+    width: 4.16666665%;
 }
 
 label {
